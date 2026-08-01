@@ -1,0 +1,629 @@
+{
+  "sourceReport": "https://dong-xuyong.github.io/last30days-archive/#/report/every-outfit-for-men-in-2026-summer",
+  "title": "Summer Outfits 2026",
+  "keyPatterns": [
+    "Capsule over closet dump — five to ten breathable pieces remix most situations",
+    "Camp collar + knit polo are the two elevated summer tops",
+    "Tailored ~7\" shorts and linen trousers beat gym shorts and jeans in heat",
+    "Warm muted color + neutral anchor reads current",
+    "Shoes finish the outfit — loafers, espadrilles, fisherman sandals, or clean white sneakers"
+  ],
+  "formulas": [
+    {
+      "id": "weekend-heat",
+      "name": "Weekend / heat default",
+      "blurb": "Linen camp collar, tailored shorts, loafers or espadrilles.",
+      "tags": ["weekend", "heat", "casual", "linen", "shorts"],
+      "slots": { "top": ["camp-collar", "linen"], "bottom": ["shorts", "chino", "linen"], "shoes": ["loafers", "espadrilles"] }
+    },
+    {
+      "id": "day-to-dinner",
+      "name": "Day-to-dinner",
+      "blurb": "Knit polo, stone/cream tailored shorts, loafers — no jacket needed.",
+      "tags": ["dinner", "date", "polo", "knit", "evening"],
+      "slots": { "top": ["knit-polo"], "bottom": ["shorts", "tailored"], "shoes": ["loafers"] }
+    },
+    {
+      "id": "coastal-travel",
+      "name": "Coastal / travel",
+      "blurb": "Tonal linen set with espadrilles or clean white sneakers.",
+      "tags": ["travel", "coastal", "vacation", "linen", "set"],
+      "slots": { "top": ["linen", "camp-collar"], "bottom": ["linen", "shorts", "trousers"], "shoes": ["espadrilles", "sneakers"] }
+    },
+    {
+      "id": "smart-casual-dinner",
+      "name": "Smart casual dinner",
+      "blurb": "Camp collar or knit polo with lightweight chinos and suede loafers.",
+      "tags": ["dinner", "smart", "chinos", "loafers"],
+      "slots": { "top": ["camp-collar", "knit-polo"], "bottom": ["chinos", "trousers"], "shoes": ["loafers", "suede"] }
+    },
+    {
+      "id": "italian-polish",
+      "name": "Italian street polish",
+      "blurb": "Relaxed linen, soft tailoring, no skinny gym silhouette.",
+      "tags": ["italian", "polish", "linen", "tailoring", "elevated"],
+      "slots": { "top": ["linen", "soft-tailoring"], "bottom": ["linen", "trousers"], "shoes": ["loafers"] }
+    },
+    {
+      "id": "all-black-night",
+      "name": "All-black night",
+      "blurb": "Black linen shirt, black tailored shorts, contrast footwear.",
+      "tags": ["night", "black", "evening", "club"],
+      "slots": { "top": ["black", "linen"], "bottom": ["black", "shorts"], "shoes": ["contrast", "loafers", "sneakers"] }
+    },
+    {
+      "id": "errands-clean",
+      "name": "Errands clean",
+      "blurb": "Good white tee, 7\" chino shorts, minimalist sneakers.",
+      "tags": ["errands", "casual", "tee", "baseline", "everyday"],
+      "slots": { "top": ["tee"], "bottom": ["shorts", "chino"], "shoes": ["sneakers"] }
+    },
+    {
+      "id": "statement-color",
+      "name": "Statement without chaos",
+      "blurb": "One warm muted color against stone, navy, or off-white neutrals.",
+      "tags": ["color", "statement", "burnt-orange", "olive", "yellow"],
+      "slots": { "top": ["statement", "knit-polo", "camp-collar"], "bottom": ["neutral", "shorts", "chinos"], "shoes": ["loafers", "sneakers"] }
+    }
+  ],
+  "pieces": [
+    {
+      "id": "top-linen-camp-white",
+      "slot": "top",
+      "name": "White linen camp collar",
+      "fabric": "linen",
+      "colors": ["white", "off-white"],
+      "colorFamily": "neutral",
+      "budget": "budget",
+      "brands": ["Uniqlo", "Abercrombie"],
+      "tags": ["camp-collar", "linen", "untucked", "weekend", "heat", "coastal"],
+      "shopQuery": "men white linen camp collar shirt",
+      "shopUrl": "https://www.google.com/search?tbm=shop&q=men+white+linen+camp+collar+shirt"
+    },
+    {
+      "id": "top-linen-camp-sage",
+      "slot": "top",
+      "name": "Sage linen camp collar",
+      "fabric": "linen",
+      "colors": ["sage", "olive"],
+      "colorFamily": "warm",
+      "budget": "mid",
+      "brands": ["Banana Republic", "Buck Mason"],
+      "tags": ["camp-collar", "linen", "weekend", "heat", "statement"],
+      "shopQuery": "men sage linen camp collar shirt",
+      "shopUrl": "https://www.google.com/search?tbm=shop&q=men+sage+linen+camp+collar+shirt"
+    },
+    {
+      "id": "top-knit-polo-navy",
+      "slot": "top",
+      "name": "Navy knit polo",
+      "fabric": "cotton knit",
+      "colors": ["navy"],
+      "colorFamily": "neutral",
+      "budget": "mid",
+      "brands": ["Buck Mason", "Todd Snyder"],
+      "tags": ["knit-polo", "dinner", "day-to-dinner", "smart"],
+      "shopQuery": "men navy textured knit polo",
+      "shopUrl": "https://www.google.com/search?tbm=shop&q=men+navy+textured+knit+polo"
+    },
+    {
+      "id": "top-knit-polo-forest",
+      "slot": "top",
+      "name": "Forest knit polo",
+      "fabric": "cotton knit",
+      "colors": ["forest", "green"],
+      "colorFamily": "warm",
+      "budget": "mid",
+      "brands": ["Buck Mason", "Banana Republic"],
+      "tags": ["knit-polo", "dinner", "statement"],
+      "shopQuery": "men forest green knit polo",
+      "shopUrl": "https://www.google.com/search?tbm=shop&q=men+forest+green+knit+polo"
+    },
+    {
+      "id": "top-knit-polo-burnt-orange",
+      "slot": "top",
+      "name": "Burnt orange knit polo",
+      "fabric": "cotton knit",
+      "colors": ["burnt-orange"],
+      "colorFamily": "warm",
+      "budget": "mid",
+      "brands": ["Todd Snyder", "Banana Republic"],
+      "tags": ["knit-polo", "statement", "day-to-dinner"],
+      "shopQuery": "men burnt orange knit polo",
+      "shopUrl": "https://www.google.com/search?tbm=shop&q=men+burnt+orange+knit+polo"
+    },
+    {
+      "id": "top-knit-polo-burgundy",
+      "slot": "top",
+      "name": "Burgundy knit polo",
+      "fabric": "cotton knit",
+      "colors": ["burgundy"],
+      "colorFamily": "warm",
+      "budget": "mid",
+      "brands": ["Buck Mason", "Portuguese Flannel"],
+      "tags": ["knit-polo", "dinner", "statement"],
+      "shopQuery": "men burgundy knit polo",
+      "shopUrl": "https://www.google.com/search?tbm=shop&q=men+burgundy+knit+polo"
+    },
+    {
+      "id": "top-linen-set-shirt",
+      "slot": "top",
+      "name": "Tonal linen set shirt",
+      "fabric": "linen",
+      "colors": ["stone", "sand"],
+      "colorFamily": "neutral",
+      "budget": "mid",
+      "brands": ["Uniqlo", "Banana Republic"],
+      "tags": ["linen", "camp-collar", "coastal", "travel", "set"],
+      "shopQuery": "men stone linen shirt matching set",
+      "shopUrl": "https://www.google.com/search?tbm=shop&q=men+stone+linen+shirt+set"
+    },
+    {
+      "id": "top-black-linen",
+      "slot": "top",
+      "name": "Black linen shirt",
+      "fabric": "linen",
+      "colors": ["black"],
+      "colorFamily": "neutral",
+      "budget": "mid",
+      "brands": ["Uniqlo", "Buck Mason"],
+      "tags": ["black", "linen", "night", "camp-collar"],
+      "shopQuery": "men black linen shirt",
+      "shopUrl": "https://www.google.com/search?tbm=shop&q=men+black+linen+shirt"
+    },
+    {
+      "id": "top-white-tee",
+      "slot": "top",
+      "name": "Heavyweight white tee",
+      "fabric": "cotton",
+      "colors": ["white"],
+      "colorFamily": "neutral",
+      "budget": "budget",
+      "brands": ["Uniqlo", "Abercrombie"],
+      "tags": ["tee", "errands", "baseline", "everyday"],
+      "shopQuery": "men heavyweight white t-shirt",
+      "shopUrl": "https://www.google.com/search?tbm=shop&q=men+heavyweight+white+t-shirt"
+    },
+    {
+      "id": "top-butter-yellow-camp",
+      "slot": "top",
+      "name": "Buttery yellow camp collar",
+      "fabric": "cotton poplin",
+      "colors": ["yellow", "butter"],
+      "colorFamily": "warm",
+      "budget": "mid",
+      "brands": ["Banana Republic", "Corridor"],
+      "tags": ["camp-collar", "statement", "color"],
+      "shopQuery": "men yellow camp collar shirt",
+      "shopUrl": "https://www.google.com/search?tbm=shop&q=men+yellow+camp+collar+shirt"
+    },
+    {
+      "id": "top-soft-linen-blazer-skip",
+      "slot": "top",
+      "name": "Soft linen overshirt",
+      "fabric": "linen",
+      "colors": ["sand", "taupe"],
+      "colorFamily": "neutral",
+      "budget": "premium",
+      "brands": ["Todd Snyder", "Nanamica"],
+      "tags": ["linen", "soft-tailoring", "italian", "polish"],
+      "shopQuery": "men soft linen overshirt",
+      "shopUrl": "https://www.google.com/search?tbm=shop&q=men+soft+linen+overshirt"
+    },
+    {
+      "id": "top-dusty-pink-polo",
+      "slot": "top",
+      "name": "Dusty pink knit polo",
+      "fabric": "cotton knit",
+      "colors": ["dusty-pink"],
+      "colorFamily": "warm",
+      "budget": "mid",
+      "brands": ["Buck Mason", "Banana Republic"],
+      "tags": ["knit-polo", "statement", "color"],
+      "shopQuery": "men dusty pink knit polo",
+      "shopUrl": "https://www.google.com/search?tbm=shop&q=men+dusty+pink+knit+polo"
+    },
+    {
+      "id": "bot-chino-shorts-stone",
+      "slot": "bottom",
+      "name": "Stone tailored chino shorts 7\"",
+      "fabric": "cotton chino",
+      "colors": ["stone", "cream"],
+      "colorFamily": "neutral",
+      "budget": "budget",
+      "brands": ["Uniqlo", "Abercrombie", "Banana Republic"],
+      "tags": ["shorts", "chino", "tailored", "7-inch", "neutral", "dinner", "weekend"],
+      "shopQuery": "men stone chino shorts 7 inch inseam",
+      "shopUrl": "https://www.google.com/search?tbm=shop&q=men+stone+chino+shorts+7+inch"
+    },
+    {
+      "id": "bot-linen-shorts-cream",
+      "slot": "bottom",
+      "name": "Cream linen shorts 7\"",
+      "fabric": "linen",
+      "colors": ["cream", "off-white"],
+      "colorFamily": "neutral",
+      "budget": "mid",
+      "brands": ["Banana Republic", "Buck Mason"],
+      "tags": ["shorts", "linen", "tailored", "weekend", "heat", "coastal"],
+      "shopQuery": "men cream linen shorts 7 inch",
+      "shopUrl": "https://www.google.com/search?tbm=shop&q=men+cream+linen+shorts+7+inch"
+    },
+    {
+      "id": "bot-linen-pants-wide",
+      "slot": "bottom",
+      "name": "Wide linen trousers",
+      "fabric": "linen",
+      "colors": ["stone", "sand"],
+      "colorFamily": "neutral",
+      "budget": "mid",
+      "brands": ["Uniqlo", "Todd Snyder"],
+      "tags": ["trousers", "linen", "coastal", "travel", "italian", "soft-tailoring"],
+      "shopQuery": "men wide leg linen trousers",
+      "shopUrl": "https://www.google.com/search?tbm=shop&q=men+wide+leg+linen+trousers"
+    },
+    {
+      "id": "bot-chinos-stone",
+      "slot": "bottom",
+      "name": "Lightweight stone chinos",
+      "fabric": "cotton chino",
+      "colors": ["stone", "tan"],
+      "colorFamily": "neutral",
+      "budget": "budget",
+      "brands": ["Uniqlo", "Banana Republic"],
+      "tags": ["chinos", "trousers", "smart", "dinner", "neutral"],
+      "shopQuery": "men lightweight stone chinos",
+      "shopUrl": "https://www.google.com/search?tbm=shop&q=men+lightweight+stone+chinos"
+    },
+    {
+      "id": "bot-chinos-tan",
+      "slot": "bottom",
+      "name": "Tan summer chinos",
+      "fabric": "cotton chino",
+      "colors": ["tan"],
+      "colorFamily": "neutral",
+      "budget": "mid",
+      "brands": ["Buck Mason", "Banana Republic"],
+      "tags": ["chinos", "trousers", "smart", "dinner"],
+      "shopQuery": "men tan summer chinos",
+      "shopUrl": "https://www.google.com/search?tbm=shop&q=men+tan+summer+chinos"
+    },
+    {
+      "id": "bot-black-shorts",
+      "slot": "bottom",
+      "name": "Black tailored shorts 7\"",
+      "fabric": "cotton chino",
+      "colors": ["black"],
+      "colorFamily": "neutral",
+      "budget": "mid",
+      "brands": ["Uniqlo", "Abercrombie"],
+      "tags": ["shorts", "black", "tailored", "night"],
+      "shopQuery": "men black tailored shorts 7 inch",
+      "shopUrl": "https://www.google.com/search?tbm=shop&q=men+black+tailored+shorts+7+inch"
+    },
+    {
+      "id": "bot-olive-shorts",
+      "slot": "bottom",
+      "name": "Olive tailored shorts",
+      "fabric": "cotton chino",
+      "colors": ["olive"],
+      "colorFamily": "warm",
+      "budget": "mid",
+      "brands": ["Banana Republic", "Buck Mason"],
+      "tags": ["shorts", "tailored", "statement", "neutral"],
+      "shopQuery": "men olive chino shorts 7 inch",
+      "shopUrl": "https://www.google.com/search?tbm=shop&q=men+olive+chino+shorts+7+inch"
+    },
+    {
+      "id": "bot-soft-tailored-linen",
+      "slot": "bottom",
+      "name": "Soft tailored linen trousers",
+      "fabric": "linen",
+      "colors": ["taupe", "sand"],
+      "colorFamily": "neutral",
+      "budget": "premium",
+      "brands": ["Todd Snyder", "Portuguese Flannel"],
+      "tags": ["trousers", "linen", "italian", "soft-tailoring", "polish"],
+      "shopQuery": "men soft tailored linen trousers",
+      "shopUrl": "https://www.google.com/search?tbm=shop&q=men+soft+tailored+linen+trousers"
+    },
+    {
+      "id": "bot-navy-shorts",
+      "slot": "bottom",
+      "name": "Navy tailored shorts",
+      "fabric": "cotton chino",
+      "colors": ["navy"],
+      "colorFamily": "neutral",
+      "budget": "budget",
+      "brands": ["Uniqlo", "Abercrombie"],
+      "tags": ["shorts", "tailored", "neutral", "statement"],
+      "shopQuery": "men navy chino shorts 7 inch",
+      "shopUrl": "https://www.google.com/search?tbm=shop&q=men+navy+chino+shorts+7+inch"
+    },
+    {
+      "id": "shoe-suede-loafers",
+      "slot": "shoes",
+      "name": "Suede penny loafers",
+      "fabric": "suede",
+      "colors": ["tan", "brown"],
+      "colorFamily": "neutral",
+      "budget": "mid",
+      "brands": ["Banana Republic", "Allen Edmonds"],
+      "tags": ["loafers", "suede", "dinner", "smart", "weekend"],
+      "shopQuery": "men tan suede penny loafers",
+      "shopUrl": "https://www.google.com/search?tbm=shop&q=men+tan+suede+penny+loafers"
+    },
+    {
+      "id": "shoe-leather-loafers",
+      "slot": "shoes",
+      "name": "Brown leather loafers",
+      "fabric": "leather",
+      "colors": ["brown"],
+      "colorFamily": "neutral",
+      "budget": "mid",
+      "brands": ["Allen Edmonds", "Banana Republic"],
+      "tags": ["loafers", "dinner", "italian", "smart"],
+      "shopQuery": "men brown leather loafers",
+      "shopUrl": "https://www.google.com/search?tbm=shop&q=men+brown+leather+loafers"
+    },
+    {
+      "id": "shoe-espadrilles",
+      "slot": "shoes",
+      "name": "Canvas espadrilles",
+      "fabric": "canvas",
+      "colors": ["navy", "beige"],
+      "colorFamily": "neutral",
+      "budget": "budget",
+      "brands": ["Uniqlo", "Seavees"],
+      "tags": ["espadrilles", "coastal", "travel", "weekend", "heat"],
+      "shopQuery": "men canvas espadrilles",
+      "shopUrl": "https://www.google.com/search?tbm=shop&q=men+canvas+espadrilles"
+    },
+    {
+      "id": "shoe-white-sneakers",
+      "slot": "shoes",
+      "name": "Clean white leather sneakers",
+      "fabric": "leather",
+      "colors": ["white"],
+      "colorFamily": "neutral",
+      "budget": "mid",
+      "brands": ["Common Projects", "Greats", "Uniqlo"],
+      "tags": ["sneakers", "minimalist", "errands", "coastal", "travel"],
+      "shopQuery": "men clean white leather sneakers",
+      "shopUrl": "https://www.google.com/search?tbm=shop&q=men+clean+white+leather+sneakers"
+    },
+    {
+      "id": "shoe-fisherman-sandals",
+      "slot": "shoes",
+      "name": "Fisherman sandals",
+      "fabric": "leather",
+      "colors": ["tan"],
+      "colorFamily": "neutral",
+      "budget": "mid",
+      "brands": ["Birkenstock", "Tkees"],
+      "tags": ["sandals", "fisherman", "heat", "breathable", "weekend"],
+      "shopQuery": "men leather fisherman sandals",
+      "shopUrl": "https://www.google.com/search?tbm=shop&q=men+leather+fisherman+sandals"
+    },
+    {
+      "id": "shoe-white-contrast",
+      "slot": "shoes",
+      "name": "White sneakers (contrast)",
+      "fabric": "leather",
+      "colors": ["white"],
+      "colorFamily": "neutral",
+      "budget": "budget",
+      "brands": ["Uniqlo", "Adidas"],
+      "tags": ["sneakers", "contrast", "night", "black"],
+      "shopQuery": "men white sneakers for black outfit",
+      "shopUrl": "https://www.google.com/search?tbm=shop&q=men+white+leather+sneakers"
+    },
+    {
+      "id": "shoe-black-loafers",
+      "slot": "shoes",
+      "name": "Black loafers",
+      "fabric": "leather",
+      "colors": ["black"],
+      "colorFamily": "neutral",
+      "budget": "mid",
+      "brands": ["Allen Edmonds", "Banana Republic"],
+      "tags": ["loafers", "night", "smart", "italian"],
+      "shopQuery": "men black leather loafers",
+      "shopUrl": "https://www.google.com/search?tbm=shop&q=men+black+leather+loafers"
+    },
+    {
+      "id": "shoe-minimal-sneakers-budget",
+      "slot": "shoes",
+      "name": "Minimalist white sneakers",
+      "fabric": "leatherette",
+      "colors": ["white"],
+      "colorFamily": "neutral",
+      "budget": "budget",
+      "brands": ["Uniqlo", "Abercrombie"],
+      "tags": ["sneakers", "errands", "everyday", "baseline"],
+      "shopQuery": "men minimalist white sneakers affordable",
+      "shopUrl": "https://www.google.com/search?tbm=shop&q=men+minimalist+white+sneakers"
+    },
+    {
+      "id": "top-soft-teal-polo",
+      "slot": "top",
+      "name": "Soft teal knit polo",
+      "fabric": "cotton knit",
+      "colors": ["teal"],
+      "colorFamily": "warm",
+      "budget": "mid",
+      "brands": ["Banana Republic", "Buck Mason"],
+      "tags": ["knit-polo", "statement", "color"],
+      "shopQuery": "men teal knit polo",
+      "shopUrl": "https://www.google.com/search?tbm=shop&q=men+teal+knit+polo"
+    },
+    {
+      "id": "bot-cream-shorts-premium",
+      "slot": "bottom",
+      "name": "Cream trouser shorts",
+      "fabric": "cotton twill",
+      "colors": ["cream"],
+      "colorFamily": "neutral",
+      "budget": "premium",
+      "brands": ["Todd Snyder", "Orslow"],
+      "tags": ["shorts", "tailored", "dinner", "neutral"],
+      "shopQuery": "men cream trouser shorts bermuda",
+      "shopUrl": "https://www.google.com/search?tbm=shop&q=men+cream+bermuda+trouser+shorts"
+    },
+    {
+      "id": "top-seersucker-camp",
+      "slot": "top",
+      "name": "Seersucker camp collar",
+      "fabric": "seersucker",
+      "colors": ["blue", "white"],
+      "colorFamily": "neutral",
+      "budget": "mid",
+      "brands": ["Banana Republic", "Portuguese Flannel"],
+      "tags": ["camp-collar", "weekend", "heat", "seersucker"],
+      "shopQuery": "men seersucker camp collar shirt",
+      "shopUrl": "https://www.google.com/search?tbm=shop&q=men+seersucker+camp+collar+shirt"
+    }
+  ],
+  "combos": [
+    {
+      "id": "combo-weekend-1",
+      "formulaId": "weekend-heat",
+      "pieceIds": ["top-linen-camp-white", "bot-linen-shorts-cream", "shoe-espadrilles"],
+      "why": "Untucked white linen + cream 7\" shorts + espadrilles is the heat default MFA keeps recycling.",
+      "budget": "budget"
+    },
+    {
+      "id": "combo-weekend-2",
+      "formulaId": "weekend-heat",
+      "pieceIds": ["top-linen-camp-sage", "bot-chino-shorts-stone", "shoe-suede-loafers"],
+      "why": "Sage camp collar lifts the look; stone shorts and suede loafers keep it grounded.",
+      "budget": "mid"
+    },
+    {
+      "id": "combo-weekend-3",
+      "formulaId": "weekend-heat",
+      "pieceIds": ["top-seersucker-camp", "bot-linen-shorts-cream", "shoe-fisherman-sandals"],
+      "why": "Seersucker breathes in humidity; fisherman sandals are the dress-shoe alternative for heat.",
+      "budget": "mid"
+    },
+    {
+      "id": "combo-dinner-1",
+      "formulaId": "day-to-dinner",
+      "pieceIds": ["top-knit-polo-navy", "bot-chino-shorts-stone", "shoe-suede-loafers"],
+      "why": "Knit polo + proper short rise + loafers is the outfit-check winner right now.",
+      "budget": "mid"
+    },
+    {
+      "id": "combo-dinner-2",
+      "formulaId": "day-to-dinner",
+      "pieceIds": ["top-knit-polo-forest", "bot-cream-shorts-premium", "shoe-leather-loafers"],
+      "why": "Forest polo against cream tailored shorts reads intentional from daytime into dinner.",
+      "budget": "premium"
+    },
+    {
+      "id": "combo-dinner-3",
+      "formulaId": "day-to-dinner",
+      "pieceIds": ["top-knit-polo-burgundy", "bot-chino-shorts-stone", "shoe-suede-loafers"],
+      "why": "Burgundy knit texture against stone neutrals — warm color, calm anchor.",
+      "budget": "mid"
+    },
+    {
+      "id": "combo-coastal-1",
+      "formulaId": "coastal-travel",
+      "pieceIds": ["top-linen-set-shirt", "bot-linen-pants-wide", "shoe-espadrilles"],
+      "why": "Tonal linen shirt + wide pants + espadrilles = coastal travel uniform.",
+      "budget": "mid"
+    },
+    {
+      "id": "combo-coastal-2",
+      "formulaId": "coastal-travel",
+      "pieceIds": ["top-linen-camp-white", "bot-linen-shorts-cream", "shoe-white-sneakers"],
+      "why": "Matching linen vibe with clean white sneakers for airport-to-beach days.",
+      "budget": "budget"
+    },
+    {
+      "id": "combo-smart-1",
+      "formulaId": "smart-casual-dinner",
+      "pieceIds": ["top-knit-polo-navy", "bot-chinos-stone", "shoe-suede-loafers"],
+      "why": "Skip athletic shorts; lightweight stone chinos + suede loafers elevate the same polo.",
+      "budget": "mid"
+    },
+    {
+      "id": "combo-smart-2",
+      "formulaId": "smart-casual-dinner",
+      "pieceIds": ["top-linen-camp-sage", "bot-chinos-tan", "shoe-leather-loafers"],
+      "why": "Camp collar + tan chinos is smart casual without a jacket in summer heat.",
+      "budget": "mid"
+    },
+    {
+      "id": "combo-italian-1",
+      "formulaId": "italian-polish",
+      "pieceIds": ["top-soft-linen-blazer-skip", "bot-soft-tailored-linen", "shoe-leather-loafers"],
+      "why": "Soft linen overshirt and relaxed trousers — Milan ease, no skinny gym cut.",
+      "budget": "premium"
+    },
+    {
+      "id": "combo-italian-2",
+      "formulaId": "italian-polish",
+      "pieceIds": ["top-linen-camp-white", "bot-linen-pants-wide", "shoe-suede-loafers"],
+      "why": "White linen + wide trousers + suede loafers hits the restrained Italian street read.",
+      "budget": "mid"
+    },
+    {
+      "id": "combo-black-1",
+      "formulaId": "all-black-night",
+      "pieceIds": ["top-black-linen", "bot-black-shorts", "shoe-white-contrast"],
+      "why": "All-black linen stack with white sneakers for contrast — intentional, not funeral.",
+      "budget": "mid"
+    },
+    {
+      "id": "combo-black-2",
+      "formulaId": "all-black-night",
+      "pieceIds": ["top-black-linen", "bot-black-shorts", "shoe-black-loafers"],
+      "why": "Black-on-black with loafers for a sharper night look.",
+      "budget": "mid"
+    },
+    {
+      "id": "combo-errands-1",
+      "formulaId": "errands-clean",
+      "pieceIds": ["top-white-tee", "bot-chino-shorts-stone", "shoe-minimal-sneakers-budget"],
+      "why": "The baseline everyone still needs — good tee, 7\" shorts, clean sneakers.",
+      "budget": "budget"
+    },
+    {
+      "id": "combo-errands-2",
+      "formulaId": "errands-clean",
+      "pieceIds": ["top-white-tee", "bot-navy-shorts", "shoe-white-sneakers"],
+      "why": "White tee + navy shorts + leather sneakers stays clean for everyday errands.",
+      "budget": "mid"
+    },
+    {
+      "id": "combo-statement-1",
+      "formulaId": "statement-color",
+      "pieceIds": ["top-knit-polo-burnt-orange", "bot-chino-shorts-stone", "shoe-suede-loafers"],
+      "why": "One warm color (burnt orange) against stone neutrals — statement without chaos.",
+      "budget": "mid"
+    },
+    {
+      "id": "combo-statement-2",
+      "formulaId": "statement-color",
+      "pieceIds": ["top-butter-yellow-camp", "bot-navy-shorts", "shoe-espadrilles"],
+      "why": "Buttery yellow against navy is the Urbanebox / RMRS warm-muted formula.",
+      "budget": "mid"
+    },
+    {
+      "id": "combo-statement-3",
+      "formulaId": "statement-color",
+      "pieceIds": ["top-dusty-pink-polo", "bot-olive-shorts", "shoe-white-sneakers"],
+      "why": "Dusty pink + olive keeps the color story muted and summer-ready.",
+      "budget": "mid"
+    },
+    {
+      "id": "combo-statement-4",
+      "formulaId": "statement-color",
+      "pieceIds": ["top-soft-teal-polo", "bot-chino-shorts-stone", "shoe-leather-loafers"],
+      "why": "Soft teal polo with stone shorts and loafers — one accent, calm base.",
+      "budget": "mid"
+    }
+  ]
+}
