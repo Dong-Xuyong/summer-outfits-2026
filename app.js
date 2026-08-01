@@ -143,19 +143,67 @@
     }, colorLabels);
   }
 
+  function pieceImageUrl(piece) {
+    return piece?.image || null;
+  }
+
+  function renderLookLayer(piece) {
+    const slot = piece.slot;
+    const label = SLOT_LABELS[slot] || slot;
+    const src = pieceImageUrl(piece);
+    const family = piece.colorFamily === "warm" ? "warm" : "neutral";
+    if (!src) {
+      return `
+        <div class="look-layer look-layer--${escapeHtml(slot)} is-missing look-family--${family}" data-slot="${escapeHtml(slot)}">
+          <span class="look-fallback">${escapeHtml(label)}</span>
+        </div>
+      `;
+    }
+    const alt = piece.imageAlt || piece.name || label;
+    return `
+      <div class="look-layer look-layer--${escapeHtml(slot)} look-family--${family}" data-slot="${escapeHtml(slot)}">
+        <img
+          src="${escapeHtml(src)}"
+          alt="${escapeHtml(alt)}"
+          loading="lazy"
+          onerror="this.closest('.look-layer').classList.add('is-missing'); this.remove();"
+        />
+        <span class="look-fallback">${escapeHtml(label)}</span>
+      </div>
+    `;
+  }
+
+  function renderLookStage(ordered) {
+    return `
+      <div class="look-stage" aria-label="Outfit preview">
+        ${ordered.map(renderLookLayer).join("")}
+      </div>
+    `;
+  }
+
   function renderSlot(piece) {
     const colors = (piece.colors || []).join(", ");
     const brands = (piece.brands || []).slice(0, 3).join(", ");
+    const src = pieceImageUrl(piece);
+    const alt = piece.imageAlt || piece.name || "";
+    const thumb = src
+      ? `<img class="slot-thumb" src="${escapeHtml(src)}" alt="${escapeHtml(alt)}" loading="lazy" onerror="this.classList.add('is-missing'); this.removeAttribute('src');" />`
+      : `<div class="slot-thumb slot-thumb--empty" aria-hidden="true"></div>`;
     return `
       <article class="slot-section">
-        <p class="slot-label">${escapeHtml(SLOT_LABELS[piece.slot] || piece.slot)}</p>
-        <h3 class="slot-name">${escapeHtml(piece.name)}</h3>
-        <p class="slot-meta">${escapeHtml(piece.fabric)} · ${escapeHtml(colors)} · ${escapeHtml(piece.budget)}</p>
-        <div class="slot-actions">
-          <a class="btn-shop" href="${escapeHtml(piece.shopUrl)}" target="_blank" rel="noopener">
-            Shop this
-          </a>
-          <span class="brand-hint">${escapeHtml(brands)}</span>
+        <div class="slot-row">
+          ${thumb}
+          <div class="slot-body">
+            <p class="slot-label">${escapeHtml(SLOT_LABELS[piece.slot] || piece.slot)}</p>
+            <h3 class="slot-name">${escapeHtml(piece.name)}</h3>
+            <p class="slot-meta">${escapeHtml(piece.fabric)} · ${escapeHtml(colors)} · ${escapeHtml(piece.budget)}</p>
+            <div class="slot-actions">
+              <a class="btn-shop" href="${escapeHtml(piece.shopUrl)}" target="_blank" rel="noopener">
+                Shop this
+              </a>
+              <span class="brand-hint">${escapeHtml(brands)}</span>
+            </div>
+          </div>
         </div>
       </article>
     `;
@@ -181,6 +229,7 @@
             ${(formula?.tags || []).slice(0, 3).map((t) => `<span class="badge">${escapeHtml(t)}</span>`).join("")}
           </div>
         </header>
+        ${renderLookStage(ordered)}
         <div class="slot-stack">
           ${ordered.map(renderSlot).join("")}
         </div>

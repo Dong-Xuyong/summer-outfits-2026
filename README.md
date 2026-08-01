@@ -9,13 +9,14 @@ Personal outfit builder for men's summer 2026 looks, based on the
 
 - Search by occasion or keyword (dinner, linen, loafers, travel…)
 - Filter by budget and color family
-- Recommended full looks with separate **Top / Bottom / Shoes** sections
-- Shop links via Google Shopping search queries (curated catalog, no live APIs)
+- Visual look stage: Top / Bottom / Shoes images stacked into one outfit
+- Recommended full looks with separate **Top / Bottom / Shoes** sections + shop links
 - Capsule rules from the research report
 
 ## Stack
 
 Plain HTML/CSS/JS, no build step. Catalog lives in `data/catalog.json`.
+Piece flat-lays live in `assets/pieces/<piece-id>.png` (AI-generated illustrative art; see `assets/ATTRIBUTION.md`).
 Theme tokens from vendored `dong-ui/`.
 
 ## Run locally

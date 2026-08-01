@@ -312,6 +312,105 @@ html.dark .btn-primary {
   text-transform: capitalize;
 }
 
+/* Look stage — stacked Top / Bottom / Shoes */
+.look-stage {
+  position: relative;
+  width: min(100%, 280px);
+  margin: 0 auto 1.35rem;
+  aspect-ratio: 3 / 4;
+  background:
+    radial-gradient(ellipse 70% 50% at 50% 20%, rgba(15, 92, 86, 0.06), transparent 60%),
+    var(--so-surface);
+  border: 1px solid var(--so-line);
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+.combo.alt .look-stage {
+  width: min(100%, 200px);
+  margin-bottom: 1rem;
+}
+
+.look-layer {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 74%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: formLayer 0.55s ease both;
+}
+
+.look-layer--top {
+  top: 4%;
+  height: 42%;
+  z-index: 2;
+  animation-delay: 0.05s;
+}
+
+.look-layer--bottom {
+  top: 38%;
+  height: 40%;
+  z-index: 1;
+  animation-delay: 0.14s;
+}
+
+.look-layer--shoes {
+  top: 72%;
+  height: 24%;
+  z-index: 3;
+  width: 58%;
+  animation-delay: 0.24s;
+}
+
+.look-layer img {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  display: block;
+  filter: drop-shadow(0 6px 14px rgba(26, 34, 28, 0.12));
+}
+
+.look-fallback {
+  display: none;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--so-mute);
+}
+
+.look-layer.is-missing {
+  border-radius: 0.75rem;
+  background: var(--so-teal-soft);
+}
+
+.look-layer.is-missing.look-family--warm {
+  background: rgba(196, 180, 154, 0.35);
+}
+
+.look-layer.is-missing .look-fallback {
+  display: block;
+}
+
+.look-layer.is-missing img {
+  display: none;
+}
+
+@keyframes formLayer {
+  from {
+    opacity: 0;
+    transform: translateX(-50%) translateY(10px) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0) scale(1);
+  }
+}
+
 /* Slot sections — Top / Bottom / Shoes */
 .slot-stack {
   display: flex;
@@ -328,6 +427,32 @@ html.dark .btn-primary {
 .slot-section:nth-child(1) { animation-delay: 0.05s; }
 .slot-section:nth-child(2) { animation-delay: 0.12s; }
 .slot-section:nth-child(3) { animation-delay: 0.19s; }
+
+.slot-row {
+  display: flex;
+  gap: 0.85rem;
+  align-items: flex-start;
+}
+
+.slot-thumb {
+  flex: 0 0 64px;
+  width: 64px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 0.55rem;
+  border: 1px solid var(--so-line);
+  background: var(--so-surface);
+}
+
+.slot-thumb--empty,
+.slot-thumb.is-missing {
+  background: var(--so-teal-soft);
+}
+
+.slot-body {
+  flex: 1;
+  min-width: 0;
+}
 
 .slot-label {
   margin: 0 0 0.35rem;
