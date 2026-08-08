@@ -1,0 +1,265 @@
+{
+  "updated": "2026-08-08",
+  "notes": "Replace QUERY with encodeURIComponent(term) unless noted. Zara/Massimo Dutti/Lefties expose dedicated search routes. Bershka accepts ?q= on the US storefront (also /q/{hyphen-slug}.html). Pull&Bear, Stradivarius, and Oysho currently 404 on /search paths; homepage ?Ntt= is the public deep-link that still resolves (SPA reads the param). Lefties has no US storefront; use GB EN.",
+  "brands": [
+    {
+      "id": "zara",
+      "name": "Zara",
+      "searchUrlTemplate": "https://www.zara.com/us/en/search?searchTerm=QUERY",
+      "budget": "mid",
+      "bestFor": [
+        "linen camp collar shirts",
+        "knit polos",
+        "tailored 7in shorts",
+        "linen trousers",
+        "loafers",
+        "espadrilles",
+        "white sneakers",
+        "fisherman sandals"
+      ]
+    },
+    {
+      "id": "pullandbear",
+      "name": "Pull&Bear",
+      "searchUrlTemplate": "https://www.pullandbear.com/us/?Ntt=QUERY",
+      "budget": "budget",
+      "bestFor": [
+        "camp collar shirts",
+        "basic tees",
+        "chino shorts",
+        "espadrilles",
+        "white sneakers",
+        "casual weekend looks"
+      ]
+    },
+    {
+      "id": "massimodutti",
+      "name": "Massimo Dutti",
+      "searchUrlTemplate": "https://www.massimodutti.com/us/search?term=QUERY",
+      "budget": "premium",
+      "bestFor": [
+        "linen camp collar / soft shirts",
+        "knit polos",
+        "tailored bermuda shorts",
+        "linen trousers",
+        "casual chinos",
+        "leather loafers"
+      ]
+    },
+    {
+      "id": "bershka",
+      "name": "Bershka",
+      "searchUrlTemplate": "https://www.bershka.com/us/?q=QUERY",
+      "budget": "budget",
+      "bestFor": [
+        "basic tees",
+        "trend shorts",
+        "white sneakers",
+        "casual sneakers",
+        "budget heat outfits"
+      ]
+    },
+    {
+      "id": "stradivarius",
+      "name": "Stradivarius",
+      "searchUrlTemplate": "https://www.stradivarius.com/us/?Ntt=QUERY",
+      "budget": "budget",
+      "bestFor": [
+        "colorful camp collar shirts",
+        "statement summer tops",
+        "warm muted accents"
+      ]
+    },
+    {
+      "id": "oysho",
+      "name": "Oysho",
+      "searchUrlTemplate": "https://www.oysho.com/us/?Ntt=QUERY",
+      "budget": "mid",
+      "bestFor": [
+        "sport / leisure tees",
+        "soft knit polos",
+        "lounge layers",
+        "travel athleisure",
+        "sandals"
+      ]
+    },
+    {
+      "id": "lefties",
+      "name": "Lefties",
+      "searchUrlTemplate": "https://www.lefties.com/gb/search.html?searchTerm=QUERY",
+      "budget": "budget",
+      "bestFor": [
+        "basic tees",
+        "value camp collar shirts",
+        "chino shorts",
+        "casual chinos",
+        "white sneakers"
+      ]
+    }
+  ],
+  "categoryBrandMap": {
+    "linen camp collar / casual shirts": ["Zara", "Massimo Dutti", "Pull&Bear", "Lefties"],
+    "knit polos": ["Zara", "Massimo Dutti", "Oysho"],
+    "basic tees": ["Lefties", "Bershka", "Pull&Bear"],
+    "tailored ~7\" shorts / chino shorts": ["Zara", "Massimo Dutti", "Pull&Bear", "Lefties"],
+    "linen trousers / casual chinos": ["Zara", "Massimo Dutti", "Lefties"],
+    "loafers / espadrilles / white sneakers / sandals": ["Zara", "Massimo Dutti", "Pull&Bear", "Bershka"],
+    "sport/leisure": ["Oysho"]
+  },
+  "outfitIdeas": [
+    {
+      "name": "Weekend heat default",
+      "vibe": "casual",
+      "brands": ["Lefties", "Pull&Bear", "Zara"],
+      "pieces": {
+        "top": "White linen camp collar shirt",
+        "bottom": "Cream tailored ~7\" linen shorts",
+        "shoes": "Espadrilles"
+      },
+      "why": "Untucked breathable top + proper short rise beats gym shorts in heat; espadrilles finish the coastal-casual read."
+    },
+    {
+      "name": "Sage day out",
+      "vibe": "casual",
+      "brands": ["Zara", "Pull&Bear"],
+      "pieces": {
+        "top": "Sage linen camp collar",
+        "bottom": "Stone chino shorts",
+        "shoes": "Suede loafers"
+      },
+      "why": "Warm muted green against stone neutrals is the current Inditex summer formula without trying too hard."
+    },
+    {
+      "name": "Day-to-dinner knit polo",
+      "vibe": "smart-casual",
+      "brands": ["Zara", "Massimo Dutti"],
+      "pieces": {
+        "top": "Navy knit polo",
+        "bottom": "Stone tailored shorts",
+        "shoes": "Suede loafers"
+      },
+      "why": "Knit texture elevates the polo; loafers carry it from afternoon plans to dinner without a jacket."
+    },
+    {
+      "name": "Forest polo polish",
+      "vibe": "smart-casual",
+      "brands": ["Zara", "Massimo Dutti"],
+      "pieces": {
+        "top": "Forest green knit polo",
+        "bottom": "Cream tailored bermuda shorts",
+        "shoes": "Brown leather loafers"
+      },
+      "why": "Massimo Dutti-level shorts and leather loafers keep the color intentional rather than sporty."
+    },
+    {
+      "name": "Coastal linen set",
+      "vibe": "casual",
+      "brands": ["Zara", "Pull&Bear"],
+      "pieces": {
+        "top": "Stone linen shirt",
+        "bottom": "Matching wide linen trousers",
+        "shoes": "Espadrilles"
+      },
+      "why": "Tonal linen is the travel uniform: packable, breathable, and remixable for dinner with loafers later."
+    },
+    {
+      "name": "Airport-to-beach",
+      "vibe": "casual",
+      "brands": ["Zara", "Lefties"],
+      "pieces": {
+        "top": "White linen camp collar",
+        "bottom": "Cream linen shorts",
+        "shoes": "Clean white sneakers"
+      },
+      "why": "White sneakers keep linen practical for walking; still reads cohesive rather than gym-casual."
+    },
+    {
+      "name": "Oysho soft coastal",
+      "vibe": "casual",
+      "brands": ["Oysho", "Zara"],
+      "pieces": {
+        "top": "Leisure cotton tee",
+        "bottom": "Wide linen trousers",
+        "shoes": "Espadrilles"
+      },
+      "why": "Oysho owns soft sport/leisure tops; pair with Zara linen bottoms so it stays summer-outfit, not gym kit."
+    },
+    {
+      "name": "Smart casual no jacket",
+      "vibe": "smart-casual",
+      "brands": ["Massimo Dutti", "Zara"],
+      "pieces": {
+        "top": "Navy knit polo",
+        "bottom": "Stone casual chinos",
+        "shoes": "Suede loafers"
+      },
+      "why": "Chinos instead of shorts when the table is nicer; still fully summer-weight and jacket-free."
+    },
+    {
+      "name": "Italian street ease",
+      "vibe": "smart-casual",
+      "brands": ["Massimo Dutti"],
+      "pieces": {
+        "top": "Soft linen overshirt (open)",
+        "bottom": "Relaxed linen trousers",
+        "shoes": "Leather loafers"
+      },
+      "why": "Overshirt replaces the blazer; Massimo Dutti fabric and cut do the polish without formal suiting."
+    },
+    {
+      "name": "Budget baseline",
+      "vibe": "casual",
+      "brands": ["Lefties", "Bershka"],
+      "pieces": {
+        "top": "Good white tee",
+        "bottom": "7\" chino shorts",
+        "shoes": "Minimal white sneakers"
+      },
+      "why": "Cheapest Inditex path that still looks intentional: fit and clean sneakers matter more than logos."
+    },
+    {
+      "name": "Stripe weekend",
+      "vibe": "casual",
+      "brands": ["Pull&Bear", "Zara"],
+      "pieces": {
+        "top": "Stripe camp collar shirt",
+        "bottom": "Stone chino shorts",
+        "shoes": "Espadrilles"
+      },
+      "why": "Pull&Bear stripes add personality; stone shorts and espadrilles keep it grounded for heat."
+    },
+    {
+      "name": "Warm accent polo",
+      "vibe": "smart-casual",
+      "brands": ["Zara", "Oysho"],
+      "pieces": {
+        "top": "Soft teal or burnt-orange knit polo",
+        "bottom": "Stone tailored shorts",
+        "shoes": "Loafers"
+      },
+      "why": "One warm accent top against a neutral bottom is the 2026 summer color move without looking loud."
+    },
+    {
+      "name": "All-black night casual",
+      "vibe": "smart-casual",
+      "brands": ["Zara", "Bershka"],
+      "pieces": {
+        "top": "Black linen shirt",
+        "bottom": "Black tailored shorts",
+        "shoes": "Black loafers"
+      },
+      "why": "Monochrome reads evening-ready in heat; skip the suit and keep lengths tailored."
+    },
+    {
+      "name": "Errands leisure",
+      "vibe": "casual",
+      "brands": ["Oysho", "Lefties", "Bershka"],
+      "pieces": {
+        "top": "Oysho leisure tee",
+        "bottom": "Navy or stone chino shorts",
+        "shoes": "White sneakers"
+      },
+      "why": "Sport/leisure top from Oysho with budget bottoms and sneakers for soft everyday movement."
+    }
+  ]
+}

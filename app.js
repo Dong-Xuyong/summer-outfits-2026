@@ -5,6 +5,15 @@
   const SLOT_LABELS = { top: "Top", bottom: "Bottom", shoes: "Shoes" };
   const BUDGETS = ["all", "budget", "mid", "premium"];
   const COLORS = ["all", "neutral", "warm"];
+  const DEFAULT_INDITEX_BRANDS = [
+    "Zara",
+    "Pull&Bear",
+    "Massimo Dutti",
+    "Bershka",
+    "Stradivarius",
+    "Oysho",
+    "Lefties",
+  ];
 
   const state = {
     catalog: null,
@@ -12,6 +21,7 @@
     occasion: "all",
     budget: "all",
     color: "all",
+    brand: "all",
   };
 
   const $ = (sel, el = document) => el.querySelector(sel);
@@ -43,6 +53,24 @@
       .filter(Boolean);
   }
 
+  function catalogBrands(catalog) {
+    if (Array.isArray(catalog?.brands) && catalog.brands.length) return catalog.brands;
+    return DEFAULT_INDITEX_BRANDS;
+  }
+
+  function isInditexFocused(catalog) {
+    if (Array.isArray(catalog?.brands) && catalog.brands.length) return true;
+    const pieces = catalog?.pieces || [];
+    if (!pieces.length) return false;
+    const nonGoogle = pieces.filter((p) => p.shopUrl && !/google\.com/i.test(p.shopUrl)).length;
+    return nonGoogle > pieces.length / 2;
+  }
+
+  function pieceHasBrand(piece, brand) {
+    const target = String(brand).toLowerCase();
+    return (piece.brands || []).some((b) => String(b).toLowerCase() === target);
+  }
+
   function comboMatchesFilters(combo, pieces, formula) {
     if (state.occasion !== "all" && combo.formulaId !== state.occasion) return false;
     if (state.budget !== "all") {
@@ -55,6 +83,9 @@
       const has = pieces.some((p) => p.colorFamily === state.color);
       if (state.color === "warm" && !has) return false;
       if (state.color === "neutral" && pieces.every((p) => p.colorFamily !== "neutral")) return false;
+    }
+    if (state.brand !== "all") {
+      if (!pieces.some((p) => pieceHasBrand(p, state.brand))) return false;
     }
     if (state.query.trim()) {
       const hay = [
@@ -126,6 +157,9 @@
     const occasionLabels = { all: "All", ...Object.fromEntries(catalog.formulas.map((f) => [f.id, f.name])) };
     const budgetLabels = { all: "All", budget: "Budget", mid: "Mid", premium: "Premium" };
     const colorLabels = { all: "All", neutral: "Neutral", warm: "Warm muted" };
+    const brands = catalogBrands(catalog);
+    const brandOptions = ["all", ...brands];
+    const brandLabels = { all: "All", ...Object.fromEntries(brands.map((b) => [b, b])) };
 
     renderChips($("#occasion-chips"), occasions, state.occasion, (v) => {
       state.occasion = v;
@@ -141,6 +175,11 @@
       state.color = v;
       render();
     }, colorLabels);
+
+    renderChips($("#brand-chips"), brandOptions, state.brand, (v) => {
+      state.brand = v;
+      render();
+    }, brandLabels);
   }
 
   function pieceImageUrl(piece) {
@@ -183,12 +222,17 @@
 
   function renderSlot(piece) {
     const colors = (piece.colors || []).join(", ");
-    const brands = (piece.brands || []).slice(0, 3).join(", ");
+    const brandList = (piece.brands || []).slice(0, 3);
+    const brands = brandList.join(", ");
+    const brandHint = brands
+      ? `<span class="brand-hint"><span class="brand-hint-label">Brands</span> ${escapeHtml(brands)}</span>`
+      : "";
     const src = pieceImageUrl(piece);
     const alt = piece.imageAlt || piece.name || "";
     const thumb = src
       ? `<img class="slot-thumb" src="${escapeHtml(src)}" alt="${escapeHtml(alt)}" loading="lazy" onerror="this.classList.add('is-missing'); this.removeAttribute('src');" />`
       : `<div class="slot-thumb slot-thumb--empty" aria-hidden="true"></div>`;
+    const shopHref = piece.shopUrl || "#";
     return `
       <article class="slot-section">
         <div class="slot-row">
@@ -198,10 +242,10 @@
             <h3 class="slot-name">${escapeHtml(piece.name)}</h3>
             <p class="slot-meta">${escapeHtml(piece.fabric)} · ${escapeHtml(colors)} · ${escapeHtml(piece.budget)}</p>
             <div class="slot-actions">
-              <a class="btn-shop" href="${escapeHtml(piece.shopUrl)}" target="_blank" rel="noopener">
+              <a class="btn-shop" href="${escapeHtml(shopHref)}" target="_blank" rel="noopener">
                 Shop this
               </a>
-              <span class="brand-hint">${escapeHtml(brands)}</span>
+              ${brandHint}
             </div>
           </div>
         </div>
@@ -252,7 +296,10 @@
     }
 
     const [featured, ...rest] = matches;
-    const meta = `${matches.length} look${matches.length === 1 ? "" : "s"} · market search links open Google Shopping`;
+    const shopNote = isInditexFocused(catalog)
+      ? "Inditex brand shop links"
+      : "market search links open Google Shopping";
+    const meta = `${matches.length} look${matches.length === 1 ? "" : "s"} · ${shopNote}`;
     let html = `<p class="results-meta">${escapeHtml(meta)}</p>`;
     html += renderCombo(featured, { featured: true });
     if (rest.length) {

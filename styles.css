@@ -508,8 +508,21 @@ html.dark .btn-primary {
 }
 
 .brand-hint {
-  font-size: 0.8rem;
-  color: var(--so-mute);
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.35rem;
+  flex-wrap: wrap;
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: var(--so-ink-soft);
+}
+
+.brand-hint-label {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--so-teal);
 }
 
 .more-heading {

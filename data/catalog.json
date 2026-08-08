@@ -1,9 +1,19 @@
 {
   "sourceReport": "https://dong-xuyong.github.io/last30days-archive/#/report/every-outfit-for-men-in-2026-summer",
   "title": "Summer Outfits 2026",
+  "retailGroup": "Inditex",
+  "brands": [
+    "Zara",
+    "Pull&Bear",
+    "Massimo Dutti",
+    "Bershka",
+    "Stradivarius",
+    "Oysho",
+    "Lefties"
+  ],
   "keyPatterns": [
-    "Capsule over closet dump — five to ten breathable pieces remix most situations",
-    "Camp collar + knit polo are the two elevated summer tops",
+    "Capsule over closet dump — five to ten breathable Inditex pieces remix most situations",
+    "Camp collar + knit polo are the two elevated summer tops (Zara / Massimo Dutti / Pull&Bear)",
     "Tailored ~7\" shorts and linen trousers beat gym shorts and jeans in heat",
     "Warm muted color + neutral anchor reads current",
     "Shoes finish the outfit — loafers, espadrilles, fisherman sandals, or clean white sneakers"
@@ -12,7 +22,7 @@
     {
       "id": "weekend-heat",
       "name": "Weekend / heat default",
-      "blurb": "Linen camp collar, tailored shorts, loafers or espadrilles.",
+      "blurb": "Linen camp collar, tailored shorts, loafers or espadrilles — shop Lefties to Zara.",
       "tags": [
         "weekend",
         "heat",
@@ -63,7 +73,7 @@
     {
       "id": "coastal-travel",
       "name": "Coastal / travel",
-      "blurb": "Tonal linen set with espadrilles or clean white sneakers.",
+      "blurb": "Tonal linen set with espadrilles or clean white sneakers from Zara or Pull&Bear.",
       "tags": [
         "travel",
         "coastal",
@@ -90,7 +100,7 @@
     {
       "id": "smart-casual-dinner",
       "name": "Smart casual dinner",
-      "blurb": "Camp collar or knit polo with lightweight chinos and suede loafers.",
+      "blurb": "Camp collar or knit polo with lightweight chinos and suede loafers — Massimo Dutti or Zara.",
       "tags": [
         "dinner",
         "smart",
@@ -115,7 +125,7 @@
     {
       "id": "italian-polish",
       "name": "Italian street polish",
-      "blurb": "Relaxed linen, soft tailoring, no skinny gym silhouette.",
+      "blurb": "Relaxed linen overshirt and soft trousers — elevated Inditex, no formal blazer.",
       "tags": [
         "italian",
         "polish",
@@ -166,7 +176,7 @@
     {
       "id": "errands-clean",
       "name": "Errands clean",
-      "blurb": "Good white tee, 7\" chino shorts, minimalist sneakers.",
+      "blurb": "Good white tee, 7\" chino shorts, minimalist sneakers — Lefties / Bershka basics.",
       "tags": [
         "errands",
         "casual",
@@ -229,8 +239,9 @@
       "colorFamily": "neutral",
       "budget": "budget",
       "brands": [
-        "Uniqlo",
-        "Abercrombie"
+        "Lefties",
+        "Pull&Bear",
+        "Bershka"
       ],
       "tags": [
         "camp-collar",
@@ -241,7 +252,7 @@
         "coastal"
       ],
       "shopQuery": "men white linen camp collar shirt",
-      "shopUrl": "https://www.google.com/search?tbm=shop&q=men+white+linen+camp+collar+shirt",
+      "shopUrl": "https://www.lefties.com/gb/search.html?searchTerm=men%20white%20linen%20camp%20collar%20shirt",
       "image": "assets/pieces/top-linen-camp-white.png",
       "imageAlt": "White linen camp collar, product flat-lay"
     },
@@ -257,8 +268,8 @@
       "colorFamily": "warm",
       "budget": "mid",
       "brands": [
-        "Banana Republic",
-        "Buck Mason"
+        "Zara",
+        "Pull&Bear"
       ],
       "tags": [
         "camp-collar",
@@ -268,7 +279,7 @@
         "statement"
       ],
       "shopQuery": "men sage linen camp collar shirt",
-      "shopUrl": "https://www.google.com/search?tbm=shop&q=men+sage+linen+camp+collar+shirt",
+      "shopUrl": "https://www.zara.com/us/en/search?searchTerm=men%20sage%20linen%20camp%20collar%20shirt",
       "image": "assets/pieces/top-linen-camp-sage.png",
       "imageAlt": "Sage linen camp collar, product flat-lay"
     },
@@ -283,8 +294,8 @@
       "colorFamily": "neutral",
       "budget": "mid",
       "brands": [
-        "Buck Mason",
-        "Todd Snyder"
+        "Zara",
+        "Massimo Dutti"
       ],
       "tags": [
         "knit-polo",
@@ -293,7 +304,7 @@
         "smart"
       ],
       "shopQuery": "men navy textured knit polo",
-      "shopUrl": "https://www.google.com/search?tbm=shop&q=men+navy+textured+knit+polo",
+      "shopUrl": "https://www.zara.com/us/en/search?searchTerm=men%20navy%20textured%20knit%20polo",
       "image": "assets/pieces/top-knit-polo-navy.png",
       "imageAlt": "Navy knit polo, product flat-lay"
     },
@@ -309,8 +320,8 @@
       "colorFamily": "warm",
       "budget": "mid",
       "brands": [
-        "Buck Mason",
-        "Banana Republic"
+        "Zara",
+        "Massimo Dutti"
       ],
       "tags": [
         "knit-polo",
@@ -318,7 +329,7 @@
         "statement"
       ],
       "shopQuery": "men forest green knit polo",
-      "shopUrl": "https://www.google.com/search?tbm=shop&q=men+forest+green+knit+polo",
+      "shopUrl": "https://www.zara.com/us/en/search?searchTerm=men%20forest%20green%20knit%20polo",
       "image": "assets/pieces/top-knit-polo-forest.png",
       "imageAlt": "Forest knit polo, product flat-lay"
     },
@@ -333,8 +344,9 @@
       "colorFamily": "warm",
       "budget": "mid",
       "brands": [
-        "Todd Snyder",
-        "Banana Republic"
+        "Zara",
+        "Bershka",
+        "Stradivarius"
       ],
       "tags": [
         "knit-polo",
@@ -342,7 +354,7 @@
         "day-to-dinner"
       ],
       "shopQuery": "men burnt orange knit polo",
-      "shopUrl": "https://www.google.com/search?tbm=shop&q=men+burnt+orange+knit+polo",
+      "shopUrl": "https://www.zara.com/us/en/search?searchTerm=men%20burnt%20orange%20knit%20polo",
       "image": "assets/pieces/top-knit-polo-burnt-orange.png",
       "imageAlt": "Burnt orange knit polo, product flat-lay"
     },
@@ -357,8 +369,8 @@
       "colorFamily": "warm",
       "budget": "mid",
       "brands": [
-        "Buck Mason",
-        "Portuguese Flannel"
+        "Massimo Dutti",
+        "Zara"
       ],
       "tags": [
         "knit-polo",
@@ -366,7 +378,7 @@
         "statement"
       ],
       "shopQuery": "men burgundy knit polo",
-      "shopUrl": "https://www.google.com/search?tbm=shop&q=men+burgundy+knit+polo",
+      "shopUrl": "https://www.massimodutti.com/us/search?term=men%20burgundy%20knit%20polo",
       "image": "assets/pieces/top-knit-polo-burgundy.png",
       "imageAlt": "Burgundy knit polo, product flat-lay"
     },
@@ -382,8 +394,8 @@
       "colorFamily": "neutral",
       "budget": "mid",
       "brands": [
-        "Uniqlo",
-        "Banana Republic"
+        "Zara",
+        "Massimo Dutti"
       ],
       "tags": [
         "linen",
@@ -393,7 +405,7 @@
         "set"
       ],
       "shopQuery": "men stone linen shirt matching set",
-      "shopUrl": "https://www.google.com/search?tbm=shop&q=men+stone+linen+shirt+set",
+      "shopUrl": "https://www.zara.com/us/en/search?searchTerm=men%20stone%20linen%20shirt%20matching%20set",
       "image": "assets/pieces/top-linen-set-shirt.png",
       "imageAlt": "Tonal linen set shirt, product flat-lay"
     },
@@ -408,8 +420,8 @@
       "colorFamily": "neutral",
       "budget": "mid",
       "brands": [
-        "Uniqlo",
-        "Buck Mason"
+        "Zara",
+        "Pull&Bear"
       ],
       "tags": [
         "black",
@@ -418,7 +430,7 @@
         "camp-collar"
       ],
       "shopQuery": "men black linen shirt",
-      "shopUrl": "https://www.google.com/search?tbm=shop&q=men+black+linen+shirt",
+      "shopUrl": "https://www.zara.com/us/en/search?searchTerm=men%20black%20linen%20shirt",
       "image": "assets/pieces/top-black-linen.png",
       "imageAlt": "Black linen shirt, product flat-lay"
     },
@@ -433,8 +445,9 @@
       "colorFamily": "neutral",
       "budget": "budget",
       "brands": [
-        "Uniqlo",
-        "Abercrombie"
+        "Lefties",
+        "Bershka",
+        "Pull&Bear"
       ],
       "tags": [
         "tee",
@@ -443,7 +456,7 @@
         "everyday"
       ],
       "shopQuery": "men heavyweight white t-shirt",
-      "shopUrl": "https://www.google.com/search?tbm=shop&q=men+heavyweight+white+t-shirt",
+      "shopUrl": "https://www.lefties.com/gb/search.html?searchTerm=men%20heavyweight%20white%20t-shirt",
       "image": "assets/pieces/top-white-tee.png",
       "imageAlt": "Heavyweight white tee, product flat-lay"
     },
@@ -457,10 +470,11 @@
         "butter"
       ],
       "colorFamily": "warm",
-      "budget": "mid",
+      "budget": "budget",
       "brands": [
-        "Banana Republic",
-        "Corridor"
+        "Stradivarius",
+        "Bershka",
+        "Pull&Bear"
       ],
       "tags": [
         "camp-collar",
@@ -468,7 +482,7 @@
         "color"
       ],
       "shopQuery": "men yellow camp collar shirt",
-      "shopUrl": "https://www.google.com/search?tbm=shop&q=men+yellow+camp+collar+shirt",
+      "shopUrl": "https://www.stradivarius.com/us/?Ntt=men%20yellow%20camp%20collar%20shirt",
       "image": "assets/pieces/top-butter-yellow-camp.png",
       "imageAlt": "Buttery yellow camp collar, product flat-lay"
     },
@@ -484,17 +498,18 @@
       "colorFamily": "neutral",
       "budget": "premium",
       "brands": [
-        "Todd Snyder",
-        "Nanamica"
+        "Massimo Dutti",
+        "Zara"
       ],
       "tags": [
         "linen",
         "soft-tailoring",
         "italian",
-        "polish"
+        "polish",
+        "overshirt"
       ],
       "shopQuery": "men soft linen overshirt",
-      "shopUrl": "https://www.google.com/search?tbm=shop&q=men+soft+linen+overshirt",
+      "shopUrl": "https://www.massimodutti.com/us/search?term=men%20soft%20linen%20overshirt",
       "image": "assets/pieces/top-soft-linen-blazer-skip.png",
       "imageAlt": "Soft linen overshirt, product flat-lay"
     },
@@ -509,8 +524,9 @@
       "colorFamily": "warm",
       "budget": "mid",
       "brands": [
-        "Buck Mason",
-        "Banana Republic"
+        "Zara",
+        "Pull&Bear",
+        "Stradivarius"
       ],
       "tags": [
         "knit-polo",
@@ -518,7 +534,7 @@
         "color"
       ],
       "shopQuery": "men dusty pink knit polo",
-      "shopUrl": "https://www.google.com/search?tbm=shop&q=men+dusty+pink+knit+polo",
+      "shopUrl": "https://www.zara.com/us/en/search?searchTerm=men%20dusty%20pink%20knit%20polo",
       "image": "assets/pieces/top-dusty-pink-polo.png",
       "imageAlt": "Dusty pink knit polo, product flat-lay"
     },
@@ -534,9 +550,9 @@
       "colorFamily": "neutral",
       "budget": "budget",
       "brands": [
-        "Uniqlo",
-        "Abercrombie",
-        "Banana Republic"
+        "Lefties",
+        "Pull&Bear",
+        "Bershka"
       ],
       "tags": [
         "shorts",
@@ -548,7 +564,7 @@
         "weekend"
       ],
       "shopQuery": "men stone chino shorts 7 inch inseam",
-      "shopUrl": "https://www.google.com/search?tbm=shop&q=men+stone+chino+shorts+7+inch",
+      "shopUrl": "https://www.lefties.com/gb/search.html?searchTerm=men%20stone%20chino%20shorts%207%20inch%20inseam",
       "image": "assets/pieces/bot-chino-shorts-stone.png",
       "imageAlt": "Stone tailored chino shorts 7\", product flat-lay"
     },
@@ -564,8 +580,8 @@
       "colorFamily": "neutral",
       "budget": "mid",
       "brands": [
-        "Banana Republic",
-        "Buck Mason"
+        "Zara",
+        "Massimo Dutti"
       ],
       "tags": [
         "shorts",
@@ -576,7 +592,7 @@
         "coastal"
       ],
       "shopQuery": "men cream linen shorts 7 inch",
-      "shopUrl": "https://www.google.com/search?tbm=shop&q=men+cream+linen+shorts+7+inch",
+      "shopUrl": "https://www.zara.com/us/en/search?searchTerm=men%20cream%20linen%20shorts%207%20inch",
       "image": "assets/pieces/bot-linen-shorts-cream.png",
       "imageAlt": "Cream linen shorts 7\", product flat-lay"
     },
@@ -592,8 +608,8 @@
       "colorFamily": "neutral",
       "budget": "mid",
       "brands": [
-        "Uniqlo",
-        "Todd Snyder"
+        "Zara",
+        "Massimo Dutti"
       ],
       "tags": [
         "trousers",
@@ -604,7 +620,7 @@
         "soft-tailoring"
       ],
       "shopQuery": "men wide leg linen trousers",
-      "shopUrl": "https://www.google.com/search?tbm=shop&q=men+wide+leg+linen+trousers",
+      "shopUrl": "https://www.zara.com/us/en/search?searchTerm=men%20wide%20leg%20linen%20trousers",
       "image": "assets/pieces/bot-linen-pants-wide.png",
       "imageAlt": "Wide linen trousers, product flat-lay"
     },
@@ -620,8 +636,8 @@
       "colorFamily": "neutral",
       "budget": "budget",
       "brands": [
-        "Uniqlo",
-        "Banana Republic"
+        "Lefties",
+        "Pull&Bear"
       ],
       "tags": [
         "chinos",
@@ -631,7 +647,7 @@
         "neutral"
       ],
       "shopQuery": "men lightweight stone chinos",
-      "shopUrl": "https://www.google.com/search?tbm=shop&q=men+lightweight+stone+chinos",
+      "shopUrl": "https://www.lefties.com/gb/search.html?searchTerm=men%20lightweight%20stone%20chinos",
       "image": "assets/pieces/bot-chinos-stone.png",
       "imageAlt": "Lightweight stone chinos, product flat-lay"
     },
@@ -646,8 +662,8 @@
       "colorFamily": "neutral",
       "budget": "mid",
       "brands": [
-        "Buck Mason",
-        "Banana Republic"
+        "Zara",
+        "Massimo Dutti"
       ],
       "tags": [
         "chinos",
@@ -656,7 +672,7 @@
         "dinner"
       ],
       "shopQuery": "men tan summer chinos",
-      "shopUrl": "https://www.google.com/search?tbm=shop&q=men+tan+summer+chinos",
+      "shopUrl": "https://www.zara.com/us/en/search?searchTerm=men%20tan%20summer%20chinos",
       "image": "assets/pieces/bot-chinos-tan.png",
       "imageAlt": "Tan summer chinos, product flat-lay"
     },
@@ -671,8 +687,8 @@
       "colorFamily": "neutral",
       "budget": "mid",
       "brands": [
-        "Uniqlo",
-        "Abercrombie"
+        "Zara",
+        "Bershka"
       ],
       "tags": [
         "shorts",
@@ -681,7 +697,7 @@
         "night"
       ],
       "shopQuery": "men black tailored shorts 7 inch",
-      "shopUrl": "https://www.google.com/search?tbm=shop&q=men+black+tailored+shorts+7+inch",
+      "shopUrl": "https://www.zara.com/us/en/search?searchTerm=men%20black%20tailored%20shorts%207%20inch",
       "image": "assets/pieces/bot-black-shorts.png",
       "imageAlt": "Black tailored shorts 7\", product flat-lay"
     },
@@ -696,8 +712,8 @@
       "colorFamily": "warm",
       "budget": "mid",
       "brands": [
-        "Banana Republic",
-        "Buck Mason"
+        "Zara",
+        "Pull&Bear"
       ],
       "tags": [
         "shorts",
@@ -706,7 +722,7 @@
         "neutral"
       ],
       "shopQuery": "men olive chino shorts 7 inch",
-      "shopUrl": "https://www.google.com/search?tbm=shop&q=men+olive+chino+shorts+7+inch",
+      "shopUrl": "https://www.zara.com/us/en/search?searchTerm=men%20olive%20chino%20shorts%207%20inch",
       "image": "assets/pieces/bot-olive-shorts.png",
       "imageAlt": "Olive tailored shorts, product flat-lay"
     },
@@ -722,8 +738,8 @@
       "colorFamily": "neutral",
       "budget": "premium",
       "brands": [
-        "Todd Snyder",
-        "Portuguese Flannel"
+        "Massimo Dutti",
+        "Zara"
       ],
       "tags": [
         "trousers",
@@ -733,7 +749,7 @@
         "polish"
       ],
       "shopQuery": "men soft tailored linen trousers",
-      "shopUrl": "https://www.google.com/search?tbm=shop&q=men+soft+tailored+linen+trousers",
+      "shopUrl": "https://www.massimodutti.com/us/search?term=men%20soft%20tailored%20linen%20trousers",
       "image": "assets/pieces/bot-soft-tailored-linen.png",
       "imageAlt": "Soft tailored linen trousers, product flat-lay"
     },
@@ -748,8 +764,9 @@
       "colorFamily": "neutral",
       "budget": "budget",
       "brands": [
-        "Uniqlo",
-        "Abercrombie"
+        "Lefties",
+        "Bershka",
+        "Pull&Bear"
       ],
       "tags": [
         "shorts",
@@ -758,7 +775,7 @@
         "statement"
       ],
       "shopQuery": "men navy chino shorts 7 inch",
-      "shopUrl": "https://www.google.com/search?tbm=shop&q=men+navy+chino+shorts+7+inch",
+      "shopUrl": "https://www.lefties.com/gb/search.html?searchTerm=men%20navy%20chino%20shorts%207%20inch",
       "image": "assets/pieces/bot-navy-shorts.png",
       "imageAlt": "Navy tailored shorts, product flat-lay"
     },
@@ -774,8 +791,8 @@
       "colorFamily": "neutral",
       "budget": "mid",
       "brands": [
-        "Banana Republic",
-        "Allen Edmonds"
+        "Zara",
+        "Massimo Dutti"
       ],
       "tags": [
         "loafers",
@@ -785,7 +802,7 @@
         "weekend"
       ],
       "shopQuery": "men tan suede penny loafers",
-      "shopUrl": "https://www.google.com/search?tbm=shop&q=men+tan+suede+penny+loafers",
+      "shopUrl": "https://www.zara.com/us/en/search?searchTerm=men%20tan%20suede%20penny%20loafers",
       "image": "assets/pieces/shoe-suede-loafers.png",
       "imageAlt": "Suede penny loafers, product flat-lay"
     },
@@ -798,10 +815,10 @@
         "brown"
       ],
       "colorFamily": "neutral",
-      "budget": "mid",
+      "budget": "premium",
       "brands": [
-        "Allen Edmonds",
-        "Banana Republic"
+        "Massimo Dutti",
+        "Zara"
       ],
       "tags": [
         "loafers",
@@ -810,7 +827,7 @@
         "smart"
       ],
       "shopQuery": "men brown leather loafers",
-      "shopUrl": "https://www.google.com/search?tbm=shop&q=men+brown+leather+loafers",
+      "shopUrl": "https://www.massimodutti.com/us/search?term=men%20brown%20leather%20loafers",
       "image": "assets/pieces/shoe-leather-loafers.png",
       "imageAlt": "Brown leather loafers, product flat-lay"
     },
@@ -826,8 +843,9 @@
       "colorFamily": "neutral",
       "budget": "budget",
       "brands": [
-        "Uniqlo",
-        "Seavees"
+        "Pull&Bear",
+        "Bershka",
+        "Lefties"
       ],
       "tags": [
         "espadrilles",
@@ -837,7 +855,7 @@
         "heat"
       ],
       "shopQuery": "men canvas espadrilles",
-      "shopUrl": "https://www.google.com/search?tbm=shop&q=men+canvas+espadrilles",
+      "shopUrl": "https://www.pullandbear.com/us/?Ntt=men%20canvas%20espadrilles",
       "image": "assets/pieces/shoe-espadrilles.png",
       "imageAlt": "Canvas espadrilles, product flat-lay"
     },
@@ -852,9 +870,8 @@
       "colorFamily": "neutral",
       "budget": "mid",
       "brands": [
-        "Common Projects",
-        "Greats",
-        "Uniqlo"
+        "Zara",
+        "Pull&Bear"
       ],
       "tags": [
         "sneakers",
@@ -864,7 +881,7 @@
         "travel"
       ],
       "shopQuery": "men clean white leather sneakers",
-      "shopUrl": "https://www.google.com/search?tbm=shop&q=men+clean+white+leather+sneakers",
+      "shopUrl": "https://www.zara.com/us/en/search?searchTerm=men%20clean%20white%20leather%20sneakers",
       "image": "assets/pieces/shoe-white-sneakers.png",
       "imageAlt": "Clean white leather sneakers, product flat-lay"
     },
@@ -879,8 +896,9 @@
       "colorFamily": "neutral",
       "budget": "mid",
       "brands": [
-        "Birkenstock",
-        "Tkees"
+        "Zara",
+        "Massimo Dutti",
+        "Oysho"
       ],
       "tags": [
         "sandals",
@@ -890,7 +908,7 @@
         "weekend"
       ],
       "shopQuery": "men leather fisherman sandals",
-      "shopUrl": "https://www.google.com/search?tbm=shop&q=men+leather+fisherman+sandals",
+      "shopUrl": "https://www.zara.com/us/en/search?searchTerm=men%20leather%20fisherman%20sandals",
       "image": "assets/pieces/shoe-fisherman-sandals.png",
       "imageAlt": "Fisherman sandals, product flat-lay"
     },
@@ -905,8 +923,9 @@
       "colorFamily": "neutral",
       "budget": "budget",
       "brands": [
-        "Uniqlo",
-        "Adidas"
+        "Lefties",
+        "Bershka",
+        "Pull&Bear"
       ],
       "tags": [
         "sneakers",
@@ -915,7 +934,7 @@
         "black"
       ],
       "shopQuery": "men white sneakers for black outfit",
-      "shopUrl": "https://www.google.com/search?tbm=shop&q=men+white+leather+sneakers",
+      "shopUrl": "https://www.lefties.com/gb/search.html?searchTerm=men%20white%20sneakers%20for%20black%20outfit",
       "image": "assets/pieces/shoe-white-contrast.png",
       "imageAlt": "White sneakers (contrast), product flat-lay"
     },
@@ -930,8 +949,8 @@
       "colorFamily": "neutral",
       "budget": "mid",
       "brands": [
-        "Allen Edmonds",
-        "Banana Republic"
+        "Zara",
+        "Massimo Dutti"
       ],
       "tags": [
         "loafers",
@@ -940,7 +959,7 @@
         "italian"
       ],
       "shopQuery": "men black leather loafers",
-      "shopUrl": "https://www.google.com/search?tbm=shop&q=men+black+leather+loafers",
+      "shopUrl": "https://www.zara.com/us/en/search?searchTerm=men%20black%20leather%20loafers",
       "image": "assets/pieces/shoe-black-loafers.png",
       "imageAlt": "Black loafers, product flat-lay"
     },
@@ -955,8 +974,9 @@
       "colorFamily": "neutral",
       "budget": "budget",
       "brands": [
-        "Uniqlo",
-        "Abercrombie"
+        "Lefties",
+        "Bershka",
+        "Pull&Bear"
       ],
       "tags": [
         "sneakers",
@@ -965,7 +985,7 @@
         "baseline"
       ],
       "shopQuery": "men minimalist white sneakers affordable",
-      "shopUrl": "https://www.google.com/search?tbm=shop&q=men+minimalist+white+sneakers",
+      "shopUrl": "https://www.lefties.com/gb/search.html?searchTerm=men%20minimalist%20white%20sneakers%20affordable",
       "image": "assets/pieces/shoe-minimal-sneakers-budget.png",
       "imageAlt": "Minimalist white sneakers, product flat-lay"
     },
@@ -980,8 +1000,8 @@
       "colorFamily": "warm",
       "budget": "mid",
       "brands": [
-        "Banana Republic",
-        "Buck Mason"
+        "Zara",
+        "Oysho"
       ],
       "tags": [
         "knit-polo",
@@ -989,7 +1009,7 @@
         "color"
       ],
       "shopQuery": "men teal knit polo",
-      "shopUrl": "https://www.google.com/search?tbm=shop&q=men+teal+knit+polo",
+      "shopUrl": "https://www.zara.com/us/en/search?searchTerm=men%20teal%20knit%20polo",
       "image": "assets/pieces/top-soft-teal-polo.png",
       "imageAlt": "Soft teal knit polo, product flat-lay"
     },
@@ -1004,8 +1024,8 @@
       "colorFamily": "neutral",
       "budget": "premium",
       "brands": [
-        "Todd Snyder",
-        "Orslow"
+        "Massimo Dutti",
+        "Zara"
       ],
       "tags": [
         "shorts",
@@ -1014,7 +1034,7 @@
         "neutral"
       ],
       "shopQuery": "men cream trouser shorts bermuda",
-      "shopUrl": "https://www.google.com/search?tbm=shop&q=men+cream+bermuda+trouser+shorts",
+      "shopUrl": "https://www.massimodutti.com/us/search?term=men%20cream%20trouser%20shorts%20bermuda",
       "image": "assets/pieces/bot-cream-shorts-premium.png",
       "imageAlt": "Cream trouser shorts, product flat-lay"
     },
@@ -1030,8 +1050,8 @@
       "colorFamily": "neutral",
       "budget": "mid",
       "brands": [
-        "Banana Republic",
-        "Portuguese Flannel"
+        "Zara",
+        "Pull&Bear"
       ],
       "tags": [
         "camp-collar",
@@ -1040,9 +1060,63 @@
         "seersucker"
       ],
       "shopQuery": "men seersucker camp collar shirt",
-      "shopUrl": "https://www.google.com/search?tbm=shop&q=men+seersucker+camp+collar+shirt",
+      "shopUrl": "https://www.zara.com/us/en/search?searchTerm=men%20seersucker%20camp%20collar%20shirt",
       "image": "assets/pieces/top-seersucker-camp.png",
       "imageAlt": "Seersucker camp collar, product flat-lay"
+    },
+    {
+      "id": "top-oysho-leisure-tee",
+      "slot": "top",
+      "name": "Relaxed leisure tee",
+      "fabric": "cotton jersey",
+      "colors": [
+        "sand",
+        "ecru"
+      ],
+      "colorFamily": "neutral",
+      "budget": "mid",
+      "brands": [
+        "Oysho",
+        "Zara"
+      ],
+      "tags": [
+        "tee",
+        "leisure",
+        "errands",
+        "coastal",
+        "everyday"
+      ],
+      "shopQuery": "men relaxed cotton t-shirt",
+      "shopUrl": "https://www.oysho.com/us/?Ntt=men%20relaxed%20cotton%20t-shirt",
+      "image": "assets/pieces/top-oysho-leisure-tee.png",
+      "imageAlt": "Relaxed leisure tee, product flat-lay"
+    },
+    {
+      "id": "top-pullbear-stripe-camp",
+      "slot": "top",
+      "name": "Stripe camp collar",
+      "fabric": "cotton",
+      "colors": [
+        "navy",
+        "white"
+      ],
+      "colorFamily": "neutral",
+      "budget": "budget",
+      "brands": [
+        "Pull&Bear",
+        "Bershka",
+        "Lefties"
+      ],
+      "tags": [
+        "camp-collar",
+        "weekend",
+        "heat",
+        "coastal"
+      ],
+      "shopQuery": "men stripe camp collar shirt",
+      "shopUrl": "https://www.pullandbear.com/us/?Ntt=men%20stripe%20camp%20collar%20shirt",
+      "image": "assets/pieces/top-pullbear-stripe-camp.png",
+      "imageAlt": "Stripe camp collar, product flat-lay"
     }
   ],
   "combos": [
@@ -1054,7 +1128,7 @@
         "bot-linen-shorts-cream",
         "shoe-espadrilles"
       ],
-      "why": "Untucked white linen + cream 7\" shorts + espadrilles is the heat default MFA keeps recycling.",
+      "why": "Untucked white linen + cream 7\" shorts + espadrilles — Lefties/Pull&Bear heat default.",
       "budget": "budget"
     },
     {
@@ -1065,7 +1139,7 @@
         "bot-chino-shorts-stone",
         "shoe-suede-loafers"
       ],
-      "why": "Sage camp collar lifts the look; stone shorts and suede loafers keep it grounded.",
+      "why": "Sage Zara camp collar lifts the look; stone shorts and suede loafers keep it grounded.",
       "budget": "mid"
     },
     {
@@ -1080,6 +1154,17 @@
       "budget": "mid"
     },
     {
+      "id": "combo-weekend-4",
+      "formulaId": "weekend-heat",
+      "pieceIds": [
+        "top-pullbear-stripe-camp",
+        "bot-chino-shorts-stone",
+        "shoe-espadrilles"
+      ],
+      "why": "Stripe camp collar from Pull&Bear with stone shorts and espadrilles for easy weekend heat.",
+      "budget": "budget"
+    },
+    {
       "id": "combo-dinner-1",
       "formulaId": "day-to-dinner",
       "pieceIds": [
@@ -1087,7 +1172,7 @@
         "bot-chino-shorts-stone",
         "shoe-suede-loafers"
       ],
-      "why": "Knit polo + proper short rise + loafers is the outfit-check winner right now.",
+      "why": "Zara/Massimo Dutti knit polo + proper short rise + loafers is the outfit-check winner.",
       "budget": "mid"
     },
     {
@@ -1098,7 +1183,7 @@
         "bot-cream-shorts-premium",
         "shoe-leather-loafers"
       ],
-      "why": "Forest polo against cream tailored shorts reads intentional from daytime into dinner.",
+      "why": "Forest polo against Massimo Dutti cream tailored shorts reads intentional day-to-dinner.",
       "budget": "premium"
     },
     {
@@ -1109,7 +1194,7 @@
         "bot-chino-shorts-stone",
         "shoe-suede-loafers"
       ],
-      "why": "Burgundy knit texture against stone neutrals — warm color, calm anchor.",
+      "why": "Burgundy knit texture against stone neutrals — warm color, calm Inditex anchor.",
       "budget": "mid"
     },
     {
@@ -1120,7 +1205,7 @@
         "bot-linen-pants-wide",
         "shoe-espadrilles"
       ],
-      "why": "Tonal linen shirt + wide pants + espadrilles = coastal travel uniform.",
+      "why": "Tonal Zara linen shirt + wide pants + espadrilles = coastal travel uniform.",
       "budget": "mid"
     },
     {
@@ -1131,8 +1216,19 @@
         "bot-linen-shorts-cream",
         "shoe-white-sneakers"
       ],
-      "why": "Matching linen vibe with clean white sneakers for airport-to-beach days.",
+      "why": "Matching linen vibe with clean white Zara sneakers for airport-to-beach days.",
       "budget": "budget"
+    },
+    {
+      "id": "combo-coastal-3",
+      "formulaId": "coastal-travel",
+      "pieceIds": [
+        "top-oysho-leisure-tee",
+        "bot-linen-pants-wide",
+        "shoe-espadrilles"
+      ],
+      "why": "Oysho leisure tee + wide linen trousers + espadrilles for soft coastal travel days.",
+      "budget": "mid"
     },
     {
       "id": "combo-smart-1",
@@ -1164,7 +1260,7 @@
         "bot-soft-tailored-linen",
         "shoe-leather-loafers"
       ],
-      "why": "Soft linen overshirt and relaxed trousers — Milan ease, no skinny gym cut.",
+      "why": "Massimo Dutti soft linen overshirt and relaxed trousers — Milan ease, no formal blazer.",
       "budget": "premium"
     },
     {
@@ -1197,7 +1293,7 @@
         "bot-black-shorts",
         "shoe-black-loafers"
       ],
-      "why": "Black-on-black with loafers for a sharper night look.",
+      "why": "Black-on-black with casual loafers for a sharper night look — still smart-casual.",
       "budget": "mid"
     },
     {
@@ -1208,7 +1304,7 @@
         "bot-chino-shorts-stone",
         "shoe-minimal-sneakers-budget"
       ],
-      "why": "The baseline everyone still needs — good tee, 7\" shorts, clean sneakers.",
+      "why": "Lefties/Bershka baseline — good tee, 7\" shorts, clean sneakers.",
       "budget": "budget"
     },
     {
@@ -1221,6 +1317,17 @@
       ],
       "why": "White tee + navy shorts + leather sneakers stays clean for everyday errands.",
       "budget": "mid"
+    },
+    {
+      "id": "combo-errands-3",
+      "formulaId": "errands-clean",
+      "pieceIds": [
+        "top-oysho-leisure-tee",
+        "bot-chino-shorts-stone",
+        "shoe-minimal-sneakers-budget"
+      ],
+      "why": "Oysho leisure tee with budget shorts and sneakers for soft everyday errands.",
+      "budget": "budget"
     },
     {
       "id": "combo-statement-1",
@@ -1241,8 +1348,8 @@
         "bot-navy-shorts",
         "shoe-espadrilles"
       ],
-      "why": "Buttery yellow against navy is the Urbanebox / RMRS warm-muted formula.",
-      "budget": "mid"
+      "why": "Buttery yellow from Stradivarius/Bershka against navy — warm-muted and shoppable.",
+      "budget": "budget"
     },
     {
       "id": "combo-statement-3",
@@ -1263,7 +1370,7 @@
         "bot-chino-shorts-stone",
         "shoe-leather-loafers"
       ],
-      "why": "Soft teal polo with stone shorts and loafers — one accent, calm base.",
+      "why": "Soft teal Oysho/Zara polo with stone shorts and loafers — one accent, calm base.",
       "budget": "mid"
     }
   ]
