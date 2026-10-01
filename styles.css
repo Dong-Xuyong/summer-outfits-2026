@@ -87,6 +87,11 @@ body {
   -webkit-backdrop-filter: blur(12px);
 }
 
+.topbar .dong-theme-toggle {
+  position: static;
+  flex-shrink: 0;
+}
+
 .brand {
   font-family: var(--so-display);
   font-weight: 600;
@@ -186,6 +191,99 @@ html.dark .btn-primary {
 
 .btn-primary:active {
   transform: scale(0.98);
+}
+
+.btn-secondary {
+  padding: 0.85rem 1.25rem;
+  border: 1px solid var(--so-ink-soft);
+  border-radius: 0.65rem;
+  background: transparent;
+  color: var(--so-ink);
+  font: inherit;
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: background 0.15s, border-color 0.15s, color 0.15s, transform 0.15s;
+}
+
+.btn-secondary:hover {
+  border-color: var(--so-ink);
+  background: color-mix(in srgb, var(--so-ink) 6%, transparent);
+}
+
+.btn-secondary:active {
+  transform: scale(0.98);
+}
+
+/* Product URL form — under search */
+.product-form {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-top: 0.65rem;
+  align-items: center;
+}
+
+.product-form input[type="url"] {
+  flex: 1 1 200px;
+  min-width: 0;
+  padding: 0.85rem 1rem;
+  border: 1px solid var(--so-line);
+  border-radius: 0.65rem;
+  background: var(--so-surface);
+  color: var(--so-ink);
+  font: inherit;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+
+.product-form input[type="url"]:focus {
+  border-color: var(--so-teal);
+  box-shadow: 0 0 0 3px var(--so-teal-soft);
+}
+
+.product-form input[type="url"]::placeholder {
+  color: var(--so-mute);
+}
+
+.product-status {
+  flex: 1 1 100%;
+  margin: 0;
+  font-size: 0.82rem;
+  line-height: 1.4;
+  color: var(--so-mute);
+}
+
+.product-status.is-error {
+  color: #8a4a3a;
+}
+
+html.dark .product-status.is-error {
+  color: #d4a090;
+}
+
+.locked-banner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem 0.85rem;
+  margin-top: 0.75rem;
+  padding: 0.55rem 0.75rem;
+  border: 1px solid var(--so-line);
+  border-left: 3px solid var(--so-teal);
+  border-radius: 0.5rem;
+  background: var(--so-teal-soft);
+  font-size: 0.85rem;
+  color: var(--so-ink-soft);
+  line-height: 1.35;
+}
+
+.locked-banner .btn-secondary {
+  margin-left: auto;
+  padding: 0.35rem 0.7rem;
+  font-size: 0.78rem;
+  border-color: var(--so-line);
 }
 
 /* —— Filters —— */
@@ -312,7 +410,7 @@ html.dark .btn-primary {
   text-transform: capitalize;
 }
 
-/* Look stage — stacked Top / Bottom / Shoes */
+/* Look stage — stacked Top / Bottom / Shoes / Accessory */
 .look-stage {
   position: relative;
   width: min(100%, 280px);
@@ -364,6 +462,19 @@ html.dark .btn-primary {
   animation-delay: 0.24s;
 }
 
+/* Smaller upper-right accent — clears shoes at bottom */
+.look-layer--accessory {
+  top: 8%;
+  left: auto;
+  right: 5%;
+  transform: none;
+  width: 30%;
+  height: 26%;
+  z-index: 4;
+  animation: formLayerEdge 0.55s ease both;
+  animation-delay: 0.18s;
+}
+
 .look-layer img {
   max-width: 100%;
   max-height: 100%;
@@ -411,7 +522,18 @@ html.dark .btn-primary {
   }
 }
 
-/* Slot sections — Top / Bottom / Shoes */
+@keyframes formLayerEdge {
+  from {
+    opacity: 0;
+    transform: translateY(10px) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Slot sections — Top / Bottom / Shoes / Accessory */
 .slot-stack {
   display: flex;
   flex-direction: column;
@@ -427,6 +549,23 @@ html.dark .btn-primary {
 .slot-section:nth-child(1) { animation-delay: 0.05s; }
 .slot-section:nth-child(2) { animation-delay: 0.12s; }
 .slot-section:nth-child(3) { animation-delay: 0.19s; }
+.slot-section:nth-child(4) { animation-delay: 0.26s; }
+
+.slot-section.is-locked {
+  margin: 0 -0.35rem;
+  padding-left: 0.35rem;
+  padding-right: 0.35rem;
+  border-radius: 0.5rem;
+  border-top-color: transparent;
+  background: color-mix(in srgb, var(--so-teal-soft) 55%, transparent);
+  box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--so-teal) 28%, var(--so-line));
+}
+
+.slot-price {
+  font-weight: 650;
+  color: var(--so-teal);
+  letter-spacing: -0.01em;
+}
 
 .slot-row {
   display: flex;
@@ -607,7 +746,20 @@ html.dark .btn-primary {
 }
 
 @media (max-width: 480px) {
-  .search-form .btn-primary {
+  .search-form .btn-primary,
+  .product-form .btn-primary,
+  .product-form .btn-secondary {
     width: 100%;
+  }
+
+  .locked-banner .btn-secondary {
+    width: auto;
+    margin-left: 0;
+  }
+
+  .look-layer--accessory {
+    width: 28%;
+    height: 24%;
+    right: 4%;
   }
 }

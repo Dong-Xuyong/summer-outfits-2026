@@ -43,6 +43,10 @@
         "shoes": [
           "loafers",
           "espadrilles"
+        ],
+        "accessory": [
+          "belt",
+          "sunglasses"
         ]
       }
     },
@@ -67,6 +71,10 @@
         ],
         "shoes": [
           "loafers"
+        ],
+        "accessory": [
+          "belt",
+          "sunglasses"
         ]
       }
     },
@@ -94,6 +102,11 @@
         "shoes": [
           "espadrilles",
           "sneakers"
+        ],
+        "accessory": [
+          "cap",
+          "tote",
+          "sunglasses"
         ]
       }
     },
@@ -119,6 +132,9 @@
         "shoes": [
           "loafers",
           "suede"
+        ],
+        "accessory": [
+          "belt"
         ]
       }
     },
@@ -1117,6 +1133,145 @@
       "shopUrl": "https://www.pullandbear.com/us/?Ntt=men%20stripe%20camp%20collar%20shirt",
       "image": "assets/pieces/top-pullbear-stripe-camp.png",
       "imageAlt": "Stripe camp collar, product flat-lay"
+    },
+    {
+      "id": "acc-woven-belt",
+      "slot": "accessory",
+      "name": "Woven leather belt",
+      "fabric": "leather",
+      "colors": [
+        "tan",
+        "brown"
+      ],
+      "colorFamily": "warm",
+      "budget": "mid",
+      "brands": [
+        "Zara",
+        "Massimo Dutti"
+      ],
+      "tags": [
+        "belt",
+        "woven",
+        "weekend",
+        "smart",
+        "dinner"
+      ],
+      "shopQuery": "men woven leather belt",
+      "shopUrl": "https://www.zara.com/us/en/search?searchTerm=men%20woven%20leather%20belt",
+      "image": "",
+      "imageAlt": "Woven leather belt, product flat-lay"
+    },
+    {
+      "id": "acc-sunglasses",
+      "slot": "accessory",
+      "name": "Tortoiseshell sunglasses",
+      "fabric": "acetate",
+      "colors": [
+        "tortoiseshell",
+        "brown"
+      ],
+      "colorFamily": "warm",
+      "budget": "mid",
+      "brands": [
+        "Zara",
+        "Pull&Bear",
+        "Bershka"
+      ],
+      "tags": [
+        "sunglasses",
+        "heat",
+        "weekend",
+        "coastal",
+        "dinner"
+      ],
+      "shopQuery": "men tortoiseshell sunglasses",
+      "shopUrl": "https://www.zara.com/us/en/search?searchTerm=men%20tortoiseshell%20sunglasses",
+      "image": "",
+      "imageAlt": "Tortoiseshell sunglasses, product flat-lay"
+    },
+    {
+      "id": "acc-linen-cap",
+      "slot": "accessory",
+      "name": "Linen baseball cap",
+      "fabric": "linen",
+      "colors": [
+        "stone",
+        "beige"
+      ],
+      "colorFamily": "neutral",
+      "budget": "budget",
+      "brands": [
+        "Pull&Bear",
+        "Zara",
+        "Lefties"
+      ],
+      "tags": [
+        "cap",
+        "linen",
+        "coastal",
+        "travel",
+        "heat"
+      ],
+      "shopQuery": "men linen baseball cap",
+      "shopUrl": "https://www.pullandbear.com/us/?Ntt=men%20linen%20baseball%20cap",
+      "image": "",
+      "imageAlt": "Linen baseball cap, product flat-lay"
+    },
+    {
+      "id": "acc-canvas-tote",
+      "slot": "accessory",
+      "name": "Canvas tote bag",
+      "fabric": "canvas",
+      "colors": [
+        "natural",
+        "ecru"
+      ],
+      "colorFamily": "neutral",
+      "budget": "budget",
+      "brands": [
+        "Zara",
+        "Pull&Bear",
+        "Lefties"
+      ],
+      "tags": [
+        "tote",
+        "canvas",
+        "coastal",
+        "travel",
+        "weekend"
+      ],
+      "shopQuery": "men canvas tote bag",
+      "shopUrl": "https://www.zara.com/us/en/search?searchTerm=men%20canvas%20tote%20bag",
+      "image": "",
+      "imageAlt": "Canvas tote bag, product flat-lay"
+    },
+    {
+      "id": "acc-leather-bracelet",
+      "slot": "accessory",
+      "name": "Leather cord bracelet",
+      "fabric": "leather",
+      "colors": [
+        "brown",
+        "tan"
+      ],
+      "colorFamily": "warm",
+      "budget": "budget",
+      "brands": [
+        "Zara",
+        "Pull&Bear",
+        "Bershka"
+      ],
+      "tags": [
+        "bracelet",
+        "leather",
+        "dinner",
+        "weekend",
+        "coastal"
+      ],
+      "shopQuery": "men leather cord bracelet",
+      "shopUrl": "https://www.zara.com/us/en/search?searchTerm=men%20leather%20cord%20bracelet",
+      "image": "",
+      "imageAlt": "Leather cord bracelet, product flat-lay"
     }
   ],
   "combos": [
@@ -1126,9 +1281,10 @@
       "pieceIds": [
         "top-linen-camp-white",
         "bot-linen-shorts-cream",
-        "shoe-espadrilles"
+        "shoe-espadrilles",
+        "acc-woven-belt"
       ],
-      "why": "Untucked white linen + cream 7\" shorts + espadrilles — Lefties/Pull&Bear heat default.",
+      "why": "Untucked white linen + cream 7\" shorts + espadrilles + woven belt — Lefties/Pull&Bear heat default.",
       "budget": "budget"
     },
     {
@@ -1137,9 +1293,10 @@
       "pieceIds": [
         "top-linen-camp-sage",
         "bot-chino-shorts-stone",
-        "shoe-suede-loafers"
+        "shoe-suede-loafers",
+        "acc-sunglasses"
       ],
-      "why": "Sage Zara camp collar lifts the look; stone shorts and suede loafers keep it grounded.",
+      "why": "Sage Zara camp collar lifts the look; stone shorts, suede loafers, and tortoiseshell sunglasses keep it grounded.",
       "budget": "mid"
     },
     {
@@ -1170,9 +1327,10 @@
       "pieceIds": [
         "top-knit-polo-navy",
         "bot-chino-shorts-stone",
-        "shoe-suede-loafers"
+        "shoe-suede-loafers",
+        "acc-woven-belt"
       ],
-      "why": "Zara/Massimo Dutti knit polo + proper short rise + loafers is the outfit-check winner.",
+      "why": "Zara/Massimo Dutti knit polo + proper short rise + loafers + woven belt is the outfit-check winner.",
       "budget": "mid"
     },
     {
@@ -1181,9 +1339,10 @@
       "pieceIds": [
         "top-knit-polo-forest",
         "bot-cream-shorts-premium",
-        "shoe-leather-loafers"
+        "shoe-leather-loafers",
+        "acc-leather-bracelet"
       ],
-      "why": "Forest polo against Massimo Dutti cream tailored shorts reads intentional day-to-dinner.",
+      "why": "Forest polo against Massimo Dutti cream tailored shorts; leather bracelet finishes day-to-dinner.",
       "budget": "premium"
     },
     {
@@ -1203,9 +1362,10 @@
       "pieceIds": [
         "top-linen-set-shirt",
         "bot-linen-pants-wide",
-        "shoe-espadrilles"
+        "shoe-espadrilles",
+        "acc-linen-cap"
       ],
-      "why": "Tonal Zara linen shirt + wide pants + espadrilles = coastal travel uniform.",
+      "why": "Tonal Zara linen shirt + wide pants + espadrilles + linen cap = coastal travel uniform.",
       "budget": "mid"
     },
     {
@@ -1214,9 +1374,10 @@
       "pieceIds": [
         "top-linen-camp-white",
         "bot-linen-shorts-cream",
-        "shoe-white-sneakers"
+        "shoe-white-sneakers",
+        "acc-canvas-tote"
       ],
-      "why": "Matching linen vibe with clean white Zara sneakers for airport-to-beach days.",
+      "why": "Matching linen vibe with clean white Zara sneakers and a canvas tote for airport-to-beach days.",
       "budget": "budget"
     },
     {
@@ -1236,9 +1397,10 @@
       "pieceIds": [
         "top-knit-polo-navy",
         "bot-chinos-stone",
-        "shoe-suede-loafers"
+        "shoe-suede-loafers",
+        "acc-woven-belt"
       ],
-      "why": "Skip athletic shorts; lightweight stone chinos + suede loafers elevate the same polo.",
+      "why": "Skip athletic shorts; lightweight stone chinos + suede loafers + woven belt elevate the same polo.",
       "budget": "mid"
     },
     {
@@ -1247,9 +1409,10 @@
       "pieceIds": [
         "top-linen-camp-sage",
         "bot-chinos-tan",
-        "shoe-leather-loafers"
+        "shoe-leather-loafers",
+        "acc-sunglasses"
       ],
-      "why": "Camp collar + tan chinos is smart casual without a jacket in summer heat.",
+      "why": "Camp collar + tan chinos + sunglasses is smart casual without a jacket in summer heat.",
       "budget": "mid"
     },
     {

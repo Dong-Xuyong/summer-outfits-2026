@@ -1,10 +1,12 @@
 (() => {
   "use strict";
 
-  const SLOT_ORDER = ["top", "bottom", "shoes"];
-  const SLOT_LABELS = { top: "Top", bottom: "Bottom", shoes: "Shoes" };
+  const SLOT_ORDER = ["top", "bottom", "shoes", "accessory"];
+  const SLOT_LABELS = { top: "Top", bottom: "Bottom", shoes: "Shoes", accessory: "Accessory" };
+  const CORE_SLOTS = ["top", "bottom", "shoes"];
   const BUDGETS = ["all", "budget", "mid", "premium"];
   const COLORS = ["all", "neutral", "warm"];
+  const RESOLVE_URL = "http://127.0.0.1:8793/resolve";
   const DEFAULT_INDITEX_BRANDS = [
     "Zara",
     "Pull&Bear",
@@ -14,6 +16,7 @@
     "Oysho",
     "Lefties",
   ];
+  const BUDGET_RANK = { budget: 1, mid: 2, premium: 3 };
 
   const state = {
     catalog: null,
@@ -22,6 +25,7 @@
     budget: "all",
     color: "all",
     brand: "all",
+    lockedPiece: null,
   };
 
   const $ = (sel, el = document) => el.querySelector(sel);
@@ -71,13 +75,26 @@
     return (piece.brands || []).some((b) => String(b).toLowerCase() === target);
   }
 
-  function comboMatchesFilters(combo, pieces, formula) {
+  function piecePassesBudget(piece) {
+    if (state.budget === "all") return true;
+    return (BUDGET_RANK[piece.budget] || 2) <= BUDGET_RANK[state.budget];
+  }
+
+  function deriveBudget(pieces) {
+    const max = Math.max(...pieces.map((p) => BUDGET_RANK[p.budget] || 2));
+    if (max <= 1) return "budget";
+    if (max <= 2) return "mid";
+    return "premium";
+  }
+
+  function comboMatchesFilters(combo, pieces, formula, { ignoreLockedBudget = false } = {}) {
     if (state.occasion !== "all" && combo.formulaId !== state.occasion) return false;
     if (state.budget !== "all") {
-      const rank = { budget: 1, mid: 2, premium: 3 };
-      const budgets = pieces.map((p) => p.budget);
-      const maxPiece = Math.max(...budgets.map((b) => rank[b] || 2));
-      if (maxPiece > rank[state.budget]) return false;
+      const relevant = ignoreLockedBudget ? pieces.filter((p) => !p.locked) : pieces;
+      if (relevant.length) {
+        const maxPiece = Math.max(...relevant.map((p) => BUDGET_RANK[p.budget] || 2));
+        if (maxPiece > BUDGET_RANK[state.budget]) return false;
+      }
     }
     if (state.color !== "all") {
       const has = pieces.some((p) => p.colorFamily === state.color);
@@ -117,14 +134,149 @@
     return score;
   }
 
+  function scorePieceCandidate(piece, formula, hints) {
+    let score = 1;
+    const tagSet = new Set(piece.tags || []);
+    const hay = [piece.name, piece.fabric, ...(piece.colors || []), ...(piece.tags || []), ...(piece.brands || [])]
+      .join(" ")
+      .toLowerCase();
+
+    for (const h of hints || []) {
+      const hl = String(h).toLowerCase();
+      if (tagSet.has(h) || tagSet.has(hl)) score += 12;
+      else if (hay.includes(hl)) score += 6;
+    }
+    for (const t of formula?.tags || []) {
+      if (tagSet.has(t)) score += 4;
+    }
+    if (state.budget !== "all" && piece.budget === state.budget) score += 5;
+    if (state.color === "warm" && piece.colorFamily === "warm") score += 8;
+    if (state.color === "neutral" && piece.colorFamily === "neutral") score += 5;
+    if (state.brand !== "all" && pieceHasBrand(piece, state.brand)) score += 8;
+    if (state.query.trim()) {
+      for (const t of tokens(state.query)) {
+        if (hay.includes(t)) score += 6;
+      }
+    }
+    return score;
+  }
+
+  function slotCandidates(catalog, slot, formula, limit = 2) {
+    const hints = (formula.slots && formula.slots[slot]) || [];
+    const ranked = catalog.pieces
+      .filter((p) => p.slot === slot && piecePassesBudget(p))
+      .map((p) => ({ p, s: scorePieceCandidate(p, formula, hints) }))
+      .sort((a, b) => b.s - a.s);
+
+    if (!ranked.length) return [];
+
+    const matched = hints.length ? ranked.filter((x) => x.s >= 7) : ranked;
+    const pool = (matched.length ? matched : ranked).slice(0, limit);
+    return pool.map((x) => x.p);
+  }
+
+  function pickAccessory(catalog, formula, usedIds) {
+    const hints = (formula.slots && formula.slots.accessory) || [];
+    const ranked = catalog.pieces
+      .filter((p) => p.slot === "accessory" && !usedIds.has(p.id) && piecePassesBudget(p))
+      .map((p) => ({ p, s: scorePieceCandidate(p, formula, hints) }))
+      .sort((a, b) => b.s - a.s);
+
+    if (!ranked.length) return null;
+    const best = ranked[0];
+    if (hints.length && best.s >= 7) return best.p;
+    if (!hints.length && best.s >= 20) return best.p;
+    return null;
+  }
+
+  function cartesian(lists) {
+    return lists.reduce(
+      (acc, list) => {
+        const next = [];
+        for (const prefix of acc) {
+          for (const item of list) next.push([...prefix, item]);
+        }
+        return next;
+      },
+      [[]]
+    );
+  }
+
+  function rebuildCombosAroundLock(catalog) {
+    const locked = state.lockedPiece;
+    if (!locked) return [];
+
+    const formulas = catalog.formulas.filter(
+      (f) => state.occasion === "all" || f.id === state.occasion
+    );
+    const resolved = [];
+
+    for (const formula of formulas) {
+      const fillSlots = CORE_SLOTS.filter((s) => s !== locked.slot);
+      const candidateLists = fillSlots.map((slot) => slotCandidates(catalog, slot, formula, 2));
+      if (candidateLists.some((list) => !list.length)) continue;
+
+      const variants = cartesian(candidateLists).slice(0, 4);
+
+      for (const picked of variants) {
+        const bySlot = { [locked.slot]: locked };
+        for (const p of picked) bySlot[p.slot] = p;
+
+        if (locked.slot !== "accessory") {
+          const used = new Set([locked.id, ...picked.map((p) => p.id)]);
+          const acc = pickAccessory(catalog, formula, used);
+          if (acc) bySlot.accessory = acc;
+        }
+
+        if (!bySlot.top || !bySlot.bottom || !bySlot.shoes) continue;
+        if (locked.slot === "accessory" && !bySlot.accessory) continue;
+
+        const pieces = SLOT_ORDER.map((s) => bySlot[s]).filter(Boolean);
+        const budget = deriveBudget(pieces);
+        const combo = {
+          id: `locked-${formula.id}-${pieces
+            .filter((p) => !p.locked)
+            .map((p) => p.id)
+            .join("-")}`,
+          formulaId: formula.id,
+          pieceIds: pieces.map((p) => p.id),
+          why: `Built around your ${locked.name} for ${formula.name}.`,
+          budget,
+        };
+
+        if (!comboMatchesFilters(combo, pieces, formula, { ignoreLockedBudget: true })) continue;
+
+        const hintBonus = pieces
+          .filter((p) => !p.locked)
+          .reduce((sum, p) => {
+            const hints = (formula.slots && formula.slots[p.slot]) || [];
+            return sum + Math.min(scorePieceCandidate(p, formula, hints), 30);
+          }, 0);
+
+        resolved.push({
+          combo,
+          pieces,
+          formula,
+          score: scoreCombo(combo, pieces, formula) + Math.floor(hintBonus / 4) + 25,
+        });
+      }
+    }
+
+    resolved.sort((a, b) => b.score - a.score);
+    return resolved;
+  }
+
   function resolveCombos(catalog) {
+    if (state.lockedPiece) return rebuildCombosAroundLock(catalog);
+
     const pMap = pieceMap(catalog);
     const fMap = formulaMap(catalog);
     const resolved = [];
 
     for (const combo of catalog.combos) {
       const pieces = combo.pieceIds.map((id) => pMap.get(id)).filter(Boolean);
-      if (pieces.length !== 3) continue;
+      const slots = new Set(pieces.map((p) => p.slot));
+      if (!slots.has("top") || !slots.has("bottom") || !slots.has("shoes")) continue;
       const formula = fMap.get(combo.formulaId);
       if (!comboMatchesFilters(combo, pieces, formula)) continue;
       resolved.push({
@@ -183,7 +335,10 @@
   }
 
   function pieceImageUrl(piece) {
-    return piece?.image || null;
+    const src = piece?.image;
+    if (!src) return null;
+    if (/^https?:\/\//i.test(src)) return src;
+    return src;
   }
 
   function renderLookLayer(piece) {
@@ -233,14 +388,19 @@
       ? `<img class="slot-thumb" src="${escapeHtml(src)}" alt="${escapeHtml(alt)}" loading="lazy" onerror="this.classList.add('is-missing'); this.removeAttribute('src');" />`
       : `<div class="slot-thumb slot-thumb--empty" aria-hidden="true"></div>`;
     const shopHref = piece.shopUrl || "#";
+    const lockedClass = piece.locked ? " is-locked" : "";
+    const priceText = piece.priceLabel || (piece.price != null && piece.price !== "" ? String(piece.price) : "");
+    const priceSpan = priceText
+      ? ` · <span class="slot-price">${escapeHtml(priceText)}</span>`
+      : "";
     return `
-      <article class="slot-section">
+      <article class="slot-section${lockedClass}">
         <div class="slot-row">
           ${thumb}
           <div class="slot-body">
             <p class="slot-label">${escapeHtml(SLOT_LABELS[piece.slot] || piece.slot)}</p>
             <h3 class="slot-name">${escapeHtml(piece.name)}</h3>
-            <p class="slot-meta">${escapeHtml(piece.fabric)} · ${escapeHtml(colors)} · ${escapeHtml(piece.budget)}</p>
+            <p class="slot-meta">${escapeHtml(piece.fabric)} · ${escapeHtml(colors)} · ${escapeHtml(piece.budget)}${priceSpan}</p>
             <div class="slot-actions">
               <a class="btn-shop" href="${escapeHtml(shopHref)}" target="_blank" rel="noopener">
                 Shop this
@@ -254,7 +414,14 @@
   }
 
   function orderedPieces(pieces) {
-    return SLOT_ORDER.map((slot) => pieces.find((p) => p.slot === slot)).filter(Boolean);
+    const bySlot = {};
+    for (const p of pieces) {
+      if (p?.slot) bySlot[p.slot] = p;
+    }
+    if (state.lockedPiece?.slot === "accessory" && !bySlot.accessory) {
+      bySlot.accessory = state.lockedPiece;
+    }
+    return SLOT_ORDER.map((slot) => bySlot[slot]).filter(Boolean);
   }
 
   function renderCombo(item, { featured = false } = {}) {
@@ -281,6 +448,19 @@
     `;
   }
 
+  function renderLockedBanner(lp) {
+    const price = lp.priceLabel
+      ? ` · <span class="slot-price">${escapeHtml(lp.priceLabel)}</span>`
+      : "";
+    const slot = SLOT_LABELS[lp.slot] || lp.slot;
+    return `
+      <div class="locked-banner" role="status">
+        <span>Looks built around <strong>${escapeHtml(lp.name)}</strong>${price} · ${escapeHtml(slot)}</span>
+        <button type="button" class="btn-secondary" id="banner-clear-lock">Clear</button>
+      </div>
+    `;
+  }
+
   function renderResults() {
     const root = $("#results");
     const catalog = state.catalog;
@@ -291,7 +471,12 @@
 
     const matches = resolveCombos(catalog);
     if (!matches.length) {
-      root.innerHTML = `<p class="empty">No outfits match. Try another occasion or clear a filter.</p>`;
+      const empty = state.lockedPiece
+        ? `<p class="empty">No outfits fit around that piece with the current filters. Try clearing a filter.</p>`
+        : `<p class="empty">No outfits match. Try another occasion or clear a filter.</p>`;
+      const banner = state.lockedPiece ? renderLockedBanner(state.lockedPiece) : "";
+      root.innerHTML = banner + empty;
+      wireBannerClear();
       return;
     }
 
@@ -301,12 +486,14 @@
       : "market search links open Google Shopping";
     const meta = `${matches.length} look${matches.length === 1 ? "" : "s"} · ${shopNote}`;
     let html = `<p class="results-meta">${escapeHtml(meta)}</p>`;
+    if (state.lockedPiece) html += renderLockedBanner(state.lockedPiece);
     html += renderCombo(featured, { featured: true });
     if (rest.length) {
       html += `<h2 class="more-heading">More combos</h2>`;
       html += rest.map((m) => renderCombo(m)).join("");
     }
     root.innerHTML = html;
+    wireBannerClear();
   }
 
   function renderPatterns(catalog) {
@@ -323,6 +510,107 @@
     renderResults();
   }
 
+  function setProductStatus(msg, isError = false) {
+    const el = $("#product-status");
+    if (!el) return;
+    el.textContent = msg;
+    el.classList.toggle("is-error", !!isError);
+  }
+
+  function lockedPieceFromResolve(data) {
+    const slot = data.slot || "top";
+    return {
+      id: "locked-" + slot,
+      slot,
+      name: data.name || "Locked piece",
+      fabric: data.family || data.kind || "",
+      colors: Array.isArray(data.colors) ? data.colors : [],
+      colorFamily: "neutral",
+      budget: "mid",
+      brands: [data.brand || "Zara"],
+      tags: Array.isArray(data.tags) ? data.tags : [],
+      shopQuery: data.name || "",
+      shopUrl: data.shopUrl || data.url || "",
+      image: data.image || "",
+      imageAlt: data.name || "Locked piece",
+      price: data.price,
+      currency: data.currency,
+      priceLabel: data.priceLabel,
+      locked: true,
+    };
+  }
+
+  function clearLockedPiece() {
+    state.lockedPiece = null;
+    const clearBtn = $("#product-clear");
+    if (clearBtn) clearBtn.hidden = true;
+    setProductStatus("");
+    const input = $("#product-url");
+    if (input) input.value = "";
+    render();
+  }
+
+  function wireBannerClear() {
+    const btn = $("#banner-clear-lock");
+    if (!btn) return;
+    btn.addEventListener("click", () => clearLockedPiece());
+  }
+
+  function wireProductForm() {
+    const form = $("#product-form");
+    if (!form) return;
+
+    form.addEventListener("submit", async (e) => {
+      e.preventDefault();
+      const input = $("#product-url");
+      const url = (input?.value || "").trim();
+      if (!url) {
+        setProductStatus("Paste a product URL first.", true);
+        return;
+      }
+
+      setProductStatus("Resolving product…");
+      try {
+        const res = await fetch(RESOLVE_URL, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ url }),
+        });
+        let data;
+        try {
+          data = await res.json();
+        } catch {
+          setProductStatus("Resolver returned an invalid response.", true);
+          return;
+        }
+
+        if (!data.ok) {
+          setProductStatus(data.error || data.message || "Could not resolve that product.", true);
+          return;
+        }
+
+        state.lockedPiece = lockedPieceFromResolve(data);
+        const lp = state.lockedPiece;
+        const priceBit = lp.priceLabel ? ` · ${lp.priceLabel}` : "";
+        setProductStatus(`Locked ${SLOT_LABELS[lp.slot] || lp.slot}: ${lp.name}${priceBit}`);
+        const clearBtn = $("#product-clear");
+        if (clearBtn) clearBtn.hidden = false;
+        render();
+        $("#results")?.scrollIntoView({ behavior: "smooth", block: "start" });
+      } catch {
+        setProductStatus(
+          "Could not reach local resolver. Start it with: python tools/resolve_product.py --serve",
+          true
+        );
+      }
+    });
+
+    const clearBtn = $("#product-clear");
+    if (clearBtn) {
+      clearBtn.addEventListener("click", () => clearLockedPiece());
+    }
+  }
+
   async function init() {
     if (window.DongUI) window.DongUI.initTheme();
 
@@ -337,6 +625,8 @@
       state.query = e.target.value;
       render();
     });
+
+    wireProductForm();
 
     try {
       const res = await fetch("data/catalog.json");

@@ -4,20 +4,21 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <meta name="theme-color" content="#e8ebe6" />
-  <meta name="description" content="Build casual men's summer 2026 outfits from Inditex brands — Zara, Pull&Bear, Massimo Dutti, Bershka, Stradivarius, Oysho, Lefties. Top / Bottom / Shoes combos with shop links." />
+  <meta name="description" content="Build casual men's summer 2026 outfits from Inditex brands — search occasions or paste a product link (local resolver) for Top / Bottom / Shoes / Accessories combos with shop links." />
   <title>Summer Outfits 2026</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&display=swap" rel="stylesheet" />
   <script src="dong-ui/theme.js"></script>
-  <link rel="stylesheet" href="dong-ui/theme.css" />
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="dong-ui/theme.css?v=2" />
+  <link rel="stylesheet" href="styles.css?v=2" />
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>☀</text></svg>" />
 </head>
 <body>
   <div id="app">
     <header class="topbar">
       <a class="brand" href="#">Summer Outfits 2026</a>
+      <a class="dong-home-link" href="https://dong-xuyong.github.io/" aria-label="Back to all apps">&#8592; Apps</a>
       <button type="button" data-dong-theme-toggle aria-label="Toggle color theme"></button>
     </header>
 
@@ -25,7 +26,7 @@
       <section class="hero" aria-labelledby="hero-title">
         <p class="hero-brand">Summer Outfits 2026</p>
         <h1 id="hero-title">Build the look. Shop the pieces.</h1>
-        <p class="hero-sub">Casual men's summer 2026 looks built from Inditex — Zara, Pull&amp;Bear, Massimo Dutti, Bershka, Stradivarius, Oysho, Lefties. Search an occasion, get a full combo with brand shop links.</p>
+        <p class="hero-sub">Casual men's summer 2026 looks built from Inditex — Zara, Pull&amp;Bear, Massimo Dutti, Bershka, Stradivarius, Oysho, Lefties. Search an occasion, or paste a product link (accessories included) when running the local resolver, to get a full combo with brand shop links.</p>
         <form id="search-form" class="search-form" role="search">
           <label class="sr-only" for="search-input">Search outfits</label>
           <input
@@ -36,6 +37,13 @@
           />
           <button type="submit" class="btn-primary">Find outfits</button>
         </form>
+        <form id="product-form" class="product-form" aria-label="Personalize from product link">
+          <label class="sr-only" for="product-url">Product URL</label>
+          <input id="product-url" type="url" placeholder="Paste Zara product link…" autocomplete="off" />
+          <button type="submit" class="btn-secondary">Use this piece</button>
+          <button type="button" id="product-clear" class="btn-secondary" hidden>Clear</button>
+        </form>
+        <p id="product-status" class="product-status" role="status" aria-live="polite"></p>
       </section>
 
       <section class="filters" aria-label="Filters">

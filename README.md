@@ -12,6 +12,8 @@ Personal outfit builder for casual men's summer 2026 looks from Inditex brands
 - Filter by occasion, budget, color family, and Inditex brand
 - Visual look stage: Top / Bottom / Shoes images stacked into one outfit
 - Recommended full looks with separate **Top / Bottom / Shoes** sections + brand shop links
+- **Product URL personalization** — paste a Zara (or Inditex) product link; a local resolver fetches the piece and personalizes the outfit around it
+- **Accessories slot** — belts, bags, jewelry, and other extras can be included when personalizing from a product link
 - Capsule rules from the research report
 
 ## Stack
@@ -22,11 +24,17 @@ Theme tokens from vendored `dong-ui/`.
 
 ## Run locally
 
+You need two terminals — static files and the product URL resolver:
+
 ```bash
 cd summer-outfits-2026
 python -m http.server 8792
+# other terminal:
+python tools/resolve_product.py --serve
 # open http://localhost:8792
 ```
+
+Product URL personalization only works when the local resolver is running. GitHub Pages cannot resolve live product URLs until a hosted proxy exists; the deployed site still supports catalog search and filters.
 
 ## Deploy
 
