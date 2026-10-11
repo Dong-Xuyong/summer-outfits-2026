@@ -423,6 +423,46 @@ html.dark .product-status.is-error {
   color: var(--so-mute);
 }
 
+.combo-total-was,
+.slot-price-was,
+.price-summary s {
+  color: var(--so-mute);
+  font-weight: 500;
+  text-decoration: line-through;
+  margin-right: 0.35rem;
+}
+
+.combo-saving {
+  display: block;
+  margin-top: 0.15rem;
+  font-family: var(--so-font);
+  font-size: 0.82rem;
+  font-weight: 650;
+  letter-spacing: 0;
+  text-transform: none;
+  color: var(--so-teal);
+}
+
+.slot-discount {
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.price-summary {
+  margin: -0.35rem 0 1.25rem;
+  font-size: 0.95rem;
+  line-height: 1.45;
+  color: var(--so-ink-soft);
+}
+
+.price-summary strong {
+  font-family: var(--so-display);
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--so-teal);
+}
+
 .combo-why {
   margin: 0;
   font-size: 0.98rem;
@@ -468,7 +508,7 @@ html.dark .product-status.is-error {
 
 .look-stage.look-stage--photo {
   width: min(100%, 440px);
-  aspect-ratio: 1200 / 1630;
+  aspect-ratio: 1200 / 1648;
   background: #f7f7f5;
 }
 

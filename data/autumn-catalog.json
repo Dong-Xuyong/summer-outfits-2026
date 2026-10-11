@@ -1,7 +1,8 @@
 {
+  "sourceReport": "https://dong-xuyong.github.io/last30days-archive/#/report/men-s-autumn-outfits-2026-v3",
   "title": "Autumn Outfits 2026",
   "retailGroup": "Inditex",
-  "shopNote": "Portugal product pages · full price, verified 11 Oct 2026",
+  "shopNote": "Portugal product pages · prices checked 11 Oct 2026",
   "brands": [
     "Zara",
     "Pull&Bear",
@@ -9,145 +10,191 @@
     "Massimo Dutti"
   ],
   "keyPatterns": [
-    "Relaxed knit, leather-effect bomber, straight jeans, and leather trainers for dry 15–20 °C days",
-    "Cooler rainy days: 100% wool quarter-zip, water-repellent trench, slim chinos, and leather Chelsea boots — all Zara, try on at Espaço Guimarães",
-    "Date or dinner: merino knit polo, wool-blend blazer, cotton-blend trousers, and split suede loafers, all Massimo Dutti",
-    "Suede loafers dislike rain; swap in the Chelsea boots on wet nights",
-    "Prices are full price in EUR from the brands' Portugal sites, verified 11 Oct 2026"
+    "Zara purl knit quarter-zip (mid-ecru) lists only M, L, XL online; S not listed.",
+    "Zara \"Leather boots\" colour Brown photographs as tan/camel suede; rubber sole.",
+    "Massimo Dutti ankle boot: colour 700 (dark brown, ref 12020850) chosen; the page also has a lighter Brown (732).",
+    "Bershka check shirt is boxy/cropped with a back graphic; fabric is 100% cotton but Bershka does not call it flannel.",
+    "Barrel jeans/pants run roomy: try one size down if between sizes.",
+    "Navy Zara wool quarter-zip and Massimo Dutti navy merino polo from v1 were not reused: v2 leans on the cream + brown palette; both still pair with outfits 2/3 if wanted.",
+    "Sale prices can end or sell out at any time; stock is online stock at check time.",
+    "Zara barrel drawstring trousers are cut very wide on the model; try one size down.",
+    "Massimo Dutti swap trades the 100% wool cable half-zip for a 100% cotton ribbed polo knit."
   ],
   "formulas": [
     {
-      "id": "everyday-casual",
-      "name": "Everyday casual",
-      "blurb": "Relaxed look for dry 15–20 °C days.",
+      "id": "budget-henley",
+      "name": "Budget: henley + flannel + indigo barrel jeans",
+      "blurb": "Henley + slightly cropped check shirt as the casual base over dark-indigo barrel jeans (indigo beats black) and white leather trainers; all-cotton tops and denim.",
       "tags": [
-        "everyday",
+        "henley",
+        "flannel",
+        "indigo",
+        "barrel",
+        "jeans",
+        "slightly",
+        "cropped",
+        "check",
+        "shirt",
         "casual",
-        "relaxed",
-        "dry",
-        "knit",
-        "jeans"
+        "base",
+        "dark-indigo",
+        "beats",
+        "black",
+        "white",
+        "leather",
+        "trainers",
+        "all-cotton",
+        "tops",
+        "denim"
       ],
       "slots": {
         "top": [
-          "knit",
-          "jumper",
-          "purl"
+          "long",
+          "sleeve",
+          "henley",
+          "shirt",
+          "white"
         ],
         "outer": [
-          "bomber",
-          "jacket"
+          "checked",
+          "long",
+          "sleeve",
+          "shirt",
+          "brown"
         ],
         "bottom": [
+          "front",
+          "seam",
+          "barrel",
           "jeans",
-          "denim"
+          "navy"
         ],
         "shoes": [
+          "leather",
           "trainers",
-          "sneakers"
+          "white"
         ]
       }
     },
     {
-      "id": "rainy-cooler",
-      "name": "Rainy cooler day",
-      "blurb": "Wool, a water-repellent trench, and Chelsea boots for cooler wet days. All Zara — try on at Espaço Guimarães.",
+      "id": "mid-cream-halfzip",
+      "name": "Mid: cream half-zip + brown trousers, rain-ready",
+      "blurb": "Close to the top Pinterest look (cream half-zip + relaxed brown trousers) but rain-proofed with a waxed-effect cotton jacket and rubber-soled leather boots for Guimarães showers.",
       "tags": [
-        "rainy",
-        "rain",
-        "cooler",
-        "layers",
-        "trench",
-        "wool",
-        "guimaraes"
+        "cream",
+        "half-zip",
+        "brown",
+        "trousers",
+        "rain-ready",
+        "close",
+        "top",
+        "pinterest",
+        "look",
+        "relaxed",
+        "rain-proofed",
+        "waxed-effect",
+        "cotton",
+        "jacket",
+        "rubber-soled",
+        "leather",
+        "boots",
+        "guimar",
+        "showers"
       ],
       "slots": {
         "top": [
-          "wool",
-          "quarter-zip",
-          "jumper"
+          "purl",
+          "knit",
+          "quarter",
+          "zip",
+          "jumper",
+          "mid",
+          "ecru"
         ],
         "outer": [
-          "trench",
-          "coat"
+          "waxed",
+          "effect",
+          "regular",
+          "fit",
+          "jacket",
+          "dark",
+          "brown"
         ],
         "bottom": [
-          "chinos"
+          "barrel",
+          "drawstring",
+          "trousers",
+          "brown",
+          "cotton"
         ],
         "shoes": [
+          "leather",
           "boots",
-          "chelsea"
+          "brown"
         ]
       }
     },
     {
-      "id": "smart-casual-date",
-      "name": "Smart-casual date",
-      "blurb": "Merino polo and wool-blend blazer for dinner. Suede loafers dislike rain — swap in the Chelsea boots on wet nights.",
+      "id": "premium-wool-cable",
+      "name": "Premium: ribbed collared knit + corduroy + cream pleated barrel",
+      "blurb": "Ribbed-texture collared knit (both on the trend list), 100% cotton, on sale. Trade-off: cotton instead of 100% wool and no cable.",
       "tags": [
-        "date",
-        "dinner",
-        "smart",
-        "blazer",
-        "loafers",
-        "merino"
+        "ribbed",
+        "collared",
+        "knit",
+        "corduroy",
+        "cream",
+        "pleated",
+        "barrel",
+        "cotton",
+        "sale"
       ],
       "slots": {
         "top": [
           "polo",
-          "merino",
-          "knit"
+          "knit",
+          "sweater",
+          "ribbed",
+          "cotton",
+          "brown",
+          "marl"
         ],
         "outer": [
-          "blazer"
+          "corduroy",
+          "jacket",
+          "with",
+          "pocket",
+          "detail",
+          "brown"
         ],
         "bottom": [
+          "barrel",
+          "fit",
           "pants",
-          "trousers"
+          "with",
+          "pleat",
+          "detail",
+          "beige"
         ],
         "shoes": [
-          "loafers",
-          "suede"
+          "split",
+          "suede",
+          "leather",
+          "ankle",
+          "boot",
+          "brown"
         ]
       }
     }
   ],
   "pieces": [
     {
-      "id": "top-purl-knit-navy",
+      "id": "top-henley-white",
       "slot": "top",
-      "name": "Regular Fit Purl Knit Jumper",
-      "fabric": "purl knit",
+      "name": "Long sleeve Henley T-shirt",
+      "fabric": "100% cotton; 0% elastane",
       "colors": [
-        "navy"
-      ],
-      "colorFamily": "neutral",
-      "budget": "budget",
-      "brands": [
-        "Zara"
-      ],
-      "tags": [
-        "knit",
-        "jumper",
-        "purl",
-        "everyday",
-        "casual"
-      ],
-      "shopQuery": "Zara Regular Fit Purl Knit Jumper navy",
-      "shopUrl": "https://www.zara.com/pt/en/purl-knit-regular-fit-jumper-p03284341.html?v1=549291033",
-      "image": "assets/autumn/pieces/top-purl-knit-navy.jpg",
-      "imageAlt": "Zara Regular Fit Purl Knit Jumper, navy",
-      "price": 29.95,
-      "currency": "EUR",
-      "priceLabel": "29,95 €"
-    },
-    {
-      "id": "outer-bomber-brown",
-      "slot": "outer",
-      "name": "Leather effect bomber jacket",
-      "fabric": "leather effect",
-      "colors": [
-        "brown"
+        "White"
       ],
       "colorFamily": "neutral",
       "budget": "budget",
@@ -155,161 +202,83 @@
         "Pull&Bear"
       ],
       "tags": [
-        "bomber",
-        "jacket",
-        "everyday",
-        "casual"
+        "long",
+        "sleeve",
+        "henley",
+        "shirt",
+        "white"
       ],
-      "shopQuery": "Pull&Bear Leather effect bomber jacket brown",
-      "shopUrl": "https://www.pullandbear.com/pt/en/leather-effect-bomber-jacket-l07720506?cS=700&pelement=748857170",
-      "image": "assets/autumn/pieces/outer-bomber-brown.jpg",
-      "imageAlt": "Pull&Bear Leather effect bomber jacket, brown",
-      "price": 39.99,
+      "shopQuery": "Pull&Bear Long sleeve Henley T-shirt White",
+      "shopUrl": "https://www.pullandbear.com/pt/en/long-sleeve-henley-tshirt-l07230569?cS=250&pelement=748913486",
+      "image": "assets/autumn/pieces/top-henley-white.jpg",
+      "imageAlt": "Pull&Bear Long sleeve Henley T-shirt, White",
+      "price": 17.99,
       "currency": "EUR",
-      "priceLabel": "39,99 €"
+      "priceLabel": "17,99 €"
     },
     {
-      "id": "bot-straight-jeans-blue",
-      "slot": "bottom",
-      "name": "Straight-leg jeans",
-      "fabric": "denim",
+      "id": "outer-checked-shirt-brown",
+      "slot": "outer",
+      "name": "Checked long sleeve shirt",
+      "fabric": "100% cotton",
       "colors": [
-        "blue"
+        "Brown"
       ],
-      "colorFamily": "neutral",
+      "colorFamily": "warm",
       "budget": "budget",
       "brands": [
         "Bershka"
       ],
       "tags": [
-        "jeans",
-        "denim",
-        "everyday",
-        "casual"
-      ],
-      "shopQuery": "Bershka Straight-leg jeans blue",
-      "shopUrl": "https://www.bershka.com/pt/en/straight-leg-jeans-c0p226926717.html?colorId=400",
-      "image": "assets/autumn/pieces/bot-straight-jeans-blue.jpg",
-      "imageAlt": "Bershka Straight-leg jeans, blue",
-      "price": 25.99,
-      "currency": "EUR",
-      "priceLabel": "25,99 €"
-    },
-    {
-      "id": "shoe-leather-trainers-brown",
-      "slot": "shoes",
-      "name": "Leather Trainers",
-      "fabric": "leather",
-      "colors": [
+        "checked",
+        "long",
+        "sleeve",
+        "shirt",
         "brown"
       ],
-      "colorFamily": "neutral",
-      "budget": "budget",
-      "brands": [
-        "Zara"
-      ],
-      "tags": [
-        "trainers",
-        "sneakers",
-        "everyday",
-        "casual"
-      ],
-      "shopQuery": "Zara Leather Trainers brown",
-      "shopUrl": "https://www.zara.com/pt/en/leather-trainers-p12240720.html?v1=568067860",
-      "image": "assets/autumn/pieces/shoe-leather-trainers-brown.jpg",
-      "imageAlt": "Zara Leather Trainers, brown",
-      "price": 39.95,
+      "shopQuery": "Bershka Checked long sleeve shirt Brown",
+      "shopUrl": "https://www.bershka.com/pt/en/checked-long-sleeve-shirt-c0p232962098.html?colorId=719",
+      "image": "assets/autumn/pieces/outer-checked-shirt-brown.jpg",
+      "imageAlt": "Bershka Checked long sleeve shirt, Brown",
+      "price": 29.99,
       "currency": "EUR",
-      "priceLabel": "39,95 €"
+      "priceLabel": "29,99 €"
     },
     {
-      "id": "top-wool-quarter-zip-navy",
-      "slot": "top",
-      "name": "100% Wool Quarter-Zip Jumper",
-      "fabric": "100% wool",
-      "colors": [
-        "navy"
-      ],
-      "colorFamily": "neutral",
-      "budget": "budget",
-      "brands": [
-        "Zara"
-      ],
-      "tags": [
-        "wool",
-        "quarter-zip",
-        "jumper",
-        "rainy",
-        "layers"
-      ],
-      "shopQuery": "Zara 100% Wool Quarter-Zip Jumper navy",
-      "shopUrl": "https://www.zara.com/pt/en/100-wool-quarter-zip-jumper-p04216303.html?v1=545437261",
-      "image": "assets/autumn/pieces/top-wool-quarter-zip-navy.jpg",
-      "imageAlt": "Zara 100% Wool Quarter-Zip Jumper, navy",
-      "price": 39.95,
-      "currency": "EUR",
-      "priceLabel": "39,95 €"
-    },
-    {
-      "id": "outer-trench-camel",
-      "slot": "outer",
-      "name": "Regular Fit Water-Repellent Trench Coat",
-      "fabric": "water-repellent",
-      "colors": [
-        "camel"
-      ],
-      "colorFamily": "warm",
-      "budget": "premium",
-      "brands": [
-        "Zara"
-      ],
-      "tags": [
-        "trench",
-        "coat",
-        "rainy",
-        "layers"
-      ],
-      "shopQuery": "Zara Regular Fit Water-Repellent Trench Coat camel",
-      "shopUrl": "https://www.zara.com/pt/en/regular-fit-water-repellent-trench-coat-p05854850.html?v1=559750602",
-      "image": "assets/autumn/pieces/outer-trench-camel.jpg",
-      "imageAlt": "Zara Regular Fit Water-Repellent Trench Coat, camel",
-      "price": 89.95,
-      "currency": "EUR",
-      "priceLabel": "89,95 €"
-    },
-    {
-      "id": "bot-slim-chinos-navy",
+      "id": "bot-barrel-jeans-navy",
       "slot": "bottom",
-      "name": "Slim Fit Chinos",
-      "fabric": "chino",
+      "name": "Front seam barrel jeans",
+      "fabric": "100% cotton",
       "colors": [
+        "Navy"
+      ],
+      "colorFamily": "neutral",
+      "budget": "budget",
+      "brands": [
+        "Pull&Bear"
+      ],
+      "tags": [
+        "front",
+        "seam",
+        "barrel",
+        "jeans",
         "navy"
       ],
-      "colorFamily": "neutral",
-      "budget": "budget",
-      "brands": [
-        "Zara"
-      ],
-      "tags": [
-        "chinos",
-        "rainy",
-        "layers"
-      ],
-      "shopQuery": "Zara Slim Fit Chinos navy",
-      "shopUrl": "https://www.zara.com/pt/en/slim-fit-chinos-p06786300.html?v1=545470815",
-      "image": "assets/autumn/pieces/bot-slim-chinos-navy.jpg",
-      "imageAlt": "Zara Slim Fit Chinos, navy",
-      "price": 25.95,
+      "shopQuery": "Pull&Bear Front seam barrel jeans Navy",
+      "shopUrl": "https://www.pullandbear.com/pt/en/front-seam-barrel-jeans-l07662504?cS=401&pelement=749635955",
+      "image": "assets/autumn/pieces/bot-barrel-jeans-navy.jpg",
+      "imageAlt": "Pull&Bear Front seam barrel jeans, Navy",
+      "price": 29.99,
       "currency": "EUR",
-      "priceLabel": "25,95 €"
+      "priceLabel": "29,99 €"
     },
     {
-      "id": "shoe-chelsea-boots-black",
+      "id": "shoe-trainers-white",
       "slot": "shoes",
-      "name": "Leather Chelsea Boots",
-      "fabric": "leather",
+      "name": "Leather trainers",
+      "fabric": "UPPER: 100% cow leather; LINING: 75% polyester, 25% polyurethane; SOLE: 100% polyurethane; INSOLE: 65% cotton, 35% polyester; TONGUE: 100% cow leather",
       "colors": [
-        "black"
+        "White"
       ],
       "colorFamily": "neutral",
       "budget": "budget",
@@ -317,177 +286,310 @@
         "Zara"
       ],
       "tags": [
-        "boots",
-        "chelsea",
-        "rainy",
-        "layers"
+        "leather",
+        "trainers",
+        "white"
       ],
-      "shopQuery": "Zara Leather Chelsea Boots black",
-      "shopUrl": "https://www.zara.com/pt/en/leather-chelsea-boots-p12007820.html?v1=576910936",
-      "image": "assets/autumn/pieces/shoe-chelsea-boots-black.jpg",
-      "imageAlt": "Zara Leather Chelsea Boots, black",
+      "shopQuery": "Zara Leather trainers White",
+      "shopUrl": "https://www.zara.com/pt/en/leather-trainers-p12227720.html?v1=545494519",
+      "image": "assets/autumn/pieces/shoe-trainers-white.jpg",
+      "imageAlt": "Zara Leather trainers, White",
       "price": 49.95,
       "currency": "EUR",
       "priceLabel": "49,95 €"
     },
     {
-      "id": "top-merino-polo-navy",
+      "id": "top-quarter-zip-ecru",
       "slot": "top",
-      "name": "100% merino wool knit polo sweater",
-      "fabric": "100% merino wool",
+      "name": "Purl knit quarter-zip jumper",
+      "fabric": "100% cotton",
       "colors": [
-        "navy"
+        "Mid-ecru"
       ],
-      "colorFamily": "neutral",
+      "colorFamily": "warm",
+      "budget": "budget",
+      "brands": [
+        "Zara"
+      ],
+      "tags": [
+        "purl",
+        "knit",
+        "quarter",
+        "zip",
+        "jumper",
+        "mid",
+        "ecru"
+      ],
+      "shopQuery": "Zara Purl knit quarter-zip jumper Mid-ecru",
+      "shopUrl": "https://www.zara.com/pt/en/purl-knit-quarter-zip-jumper-p03332310.html?v1=545409941",
+      "image": "assets/autumn/pieces/top-quarter-zip-ecru.jpg",
+      "imageAlt": "Zara Purl knit quarter-zip jumper, Mid-ecru",
+      "price": 39.95,
+      "currency": "EUR",
+      "priceLabel": "39,95 €"
+    },
+    {
+      "id": "outer-waxed-jacket-brown",
+      "slot": "outer",
+      "name": "Waxed-effect regular fit jacket",
+      "fabric": "OUTER SHELL: 100% cotton",
+      "colors": [
+        "Dark brown"
+      ],
+      "colorFamily": "warm",
       "budget": "mid",
+      "brands": [
+        "Zara"
+      ],
+      "tags": [
+        "waxed",
+        "effect",
+        "regular",
+        "fit",
+        "jacket",
+        "dark",
+        "brown"
+      ],
+      "shopQuery": "Zara Waxed-effect regular fit jacket Dark brown",
+      "shopUrl": "https://www.zara.com/pt/en/regular-fit-waxed-effect-jacket-p01437365.html?v1=555104805",
+      "image": "assets/autumn/pieces/outer-waxed-jacket-brown.jpg",
+      "imageAlt": "Zara Waxed-effect regular fit jacket, Dark brown",
+      "price": 79.95,
+      "currency": "EUR",
+      "priceLabel": "79,95 €"
+    },
+    {
+      "id": "bot-barrel-drawstring-brown",
+      "slot": "bottom",
+      "name": "Barrel fit drawstring trousers",
+      "fabric": "100% cotton",
+      "colors": [
+        "Brown"
+      ],
+      "colorFamily": "warm",
+      "budget": "budget",
+      "brands": [
+        "Zara"
+      ],
+      "tags": [
+        "barrel",
+        "drawstring",
+        "trousers",
+        "brown",
+        "cotton"
+      ],
+      "shopQuery": "Zara Barrel fit drawstring trousers Brown",
+      "shopUrl": "https://www.zara.com/pt/en/barrel-fit-drawstring-trousers-p00108313.html?v1=545447518",
+      "image": "assets/autumn/pieces/bot-barrel-drawstring-brown.jpg",
+      "imageAlt": "Zara Barrel fit drawstring trousers, Brown",
+      "price": 15.99,
+      "currency": "EUR",
+      "priceLabel": "15,99 €",
+      "wasPrice": 29.95,
+      "wasPriceLabel": "29,95 €",
+      "discountLabel": "-46%"
+    },
+    {
+      "id": "shoe-leather-boots-brown",
+      "slot": "shoes",
+      "name": "Leather boots",
+      "fabric": "UPPER: 100% cow leather; LINING: 90% sheep leather, 10% polyester; SOLE: 100% rubber; INSOLE: 100% sheep leather; TONGUE: 100% cow leather",
+      "colors": [
+        "Brown"
+      ],
+      "colorFamily": "warm",
+      "budget": "mid",
+      "brands": [
+        "Zara"
+      ],
+      "tags": [
+        "leather",
+        "boots",
+        "brown"
+      ],
+      "shopQuery": "Zara Leather boots Brown",
+      "shopUrl": "https://www.zara.com/pt/en/leather-boots-p12094720.html?v1=545413069",
+      "image": "assets/autumn/pieces/shoe-leather-boots-brown.jpg",
+      "imageAlt": "Zara Leather boots, Brown",
+      "price": 89.95,
+      "currency": "EUR",
+      "priceLabel": "89,95 €"
+    },
+    {
+      "id": "top-polo-knit-brown-marl",
+      "slot": "top",
+      "name": "Button-detail polo knit sweater",
+      "fabric": "100% cotton",
+      "colors": [
+        "BROWN MARL"
+      ],
+      "colorFamily": "warm",
+      "budget": "budget",
       "brands": [
         "Massimo Dutti"
       ],
       "tags": [
         "polo",
-        "merino",
         "knit",
-        "date",
-        "dinner",
-        "smart"
+        "sweater",
+        "ribbed",
+        "cotton",
+        "brown",
+        "marl"
       ],
-      "shopQuery": "Massimo Dutti 100% merino wool knit polo sweater navy",
-      "shopUrl": "https://www.massimodutti.com/pt/en/100-merino-wool-knit-polo-sweater-l01301210?pelement=61729114",
-      "image": "assets/autumn/pieces/top-merino-polo-navy.jpg",
-      "imageAlt": "Massimo Dutti 100% merino wool knit polo sweater, navy",
-      "price": 59.95,
+      "shopQuery": "Massimo Dutti Button-detail polo knit sweater BROWN MARL",
+      "shopUrl": "https://www.massimodutti.com/pt/en/buttondetail-polo-knit-sweater-l01376201?pelement=62129830&colorId=724",
+      "image": "assets/autumn/pieces/top-polo-knit-brown-marl.jpg",
+      "imageAlt": "Massimo Dutti Button-detail polo knit sweater, BROWN MARL",
+      "price": 35.95,
       "currency": "EUR",
-      "priceLabel": "59,95 €"
+      "priceLabel": "35,95 €",
+      "wasPrice": 49.95,
+      "wasPriceLabel": "49,95 €"
     },
     {
-      "id": "outer-wool-blazer-brown",
+      "id": "outer-corduroy-jacket-brown",
       "slot": "outer",
-      "name": "Wool-blend blazer with pocket details",
-      "fabric": "wool blend",
+      "name": "Corduroy jacket with pocket detail",
+      "fabric": "100% cotton; 100% polyester",
       "colors": [
-        "brown"
+        "BROWN"
       ],
-      "colorFamily": "neutral",
+      "colorFamily": "warm",
       "budget": "premium",
       "brands": [
         "Massimo Dutti"
       ],
       "tags": [
-        "blazer",
-        "date",
-        "dinner",
-        "smart"
+        "corduroy",
+        "jacket",
+        "with",
+        "pocket",
+        "detail",
+        "brown"
       ],
-      "shopQuery": "Massimo Dutti Wool-blend blazer with pocket details brown",
-      "shopUrl": "https://www.massimodutti.com/pt/en/woolblend-blazer-with-pocket-details-l02597365?pelement=62812085",
-      "image": "assets/autumn/pieces/outer-wool-blazer-brown.jpg",
-      "imageAlt": "Massimo Dutti Wool-blend blazer with pocket details, brown",
-      "price": 199,
+      "shopQuery": "Massimo Dutti Corduroy jacket with pocket detail BROWN",
+      "shopUrl": "https://www.massimodutti.com/pt/en/corduroy-jacket-with-pocket-detail-l03257417?pelement=63726072&colorId=700",
+      "image": "assets/autumn/pieces/outer-corduroy-jacket-brown.jpg",
+      "imageAlt": "Massimo Dutti Corduroy jacket with pocket detail, BROWN",
+      "price": 99.95,
       "currency": "EUR",
-      "priceLabel": "199 €"
+      "priceLabel": "99,95 €"
     },
     {
-      "id": "bot-slim-pants-beige",
+      "id": "bot-barrel-pants-beige",
       "slot": "bottom",
-      "name": "Cotton blend slim fit pants",
-      "fabric": "cotton blend",
+      "name": "Barrel fit pants with pleat detail",
+      "fabric": "100% cotton; 100% cotton",
       "colors": [
-        "beige"
+        "BEIGE"
       ],
-      "colorFamily": "neutral",
+      "colorFamily": "warm",
       "budget": "mid",
       "brands": [
         "Massimo Dutti"
       ],
       "tags": [
+        "barrel",
+        "fit",
         "pants",
-        "trousers",
-        "date",
-        "dinner",
-        "smart"
+        "with",
+        "pleat",
+        "detail",
+        "beige"
       ],
-      "shopQuery": "Massimo Dutti Cotton blend slim fit pants beige",
-      "shopUrl": "https://www.massimodutti.com/pt/en/cotton-blend-slim-fit-pants-l00101001?pelement=61734337",
-      "image": "assets/autumn/pieces/bot-slim-pants-beige.jpg",
-      "imageAlt": "Massimo Dutti Cotton blend slim fit pants, beige",
+      "shopQuery": "Massimo Dutti Barrel fit pants with pleat detail BEIGE",
+      "shopUrl": "https://www.massimodutti.com/pt/en/barrel-fit-pants-with-pleat-detail-l00181015?pelement=63150470&colorId=710",
+      "image": "assets/autumn/pieces/bot-barrel-pants-beige.jpg",
+      "imageAlt": "Massimo Dutti Barrel fit pants with pleat detail, BEIGE",
       "price": 59.95,
       "currency": "EUR",
       "priceLabel": "59,95 €"
     },
     {
-      "id": "shoe-suede-loafer-brown",
+      "id": "shoe-suede-ankle-boot-brown",
       "slot": "shoes",
-      "name": "Split suede leather loafer",
-      "fabric": "split suede",
+      "name": "Split suede leather ankle boot",
+      "fabric": "100% cow leather; 80% cow leather, 20% polyester; 100% rubber; 100% cow leather; 100% cow leather",
       "colors": [
-        "brown"
+        "BROWN"
       ],
-      "colorFamily": "neutral",
+      "colorFamily": "warm",
       "budget": "premium",
       "brands": [
         "Massimo Dutti"
       ],
       "tags": [
-        "loafers",
+        "split",
         "suede",
-        "date",
-        "dinner",
-        "smart"
+        "leather",
+        "ankle",
+        "boot",
+        "brown"
       ],
-      "shopQuery": "Massimo Dutti Split suede leather loafer brown",
-      "shopUrl": "https://www.massimodutti.com/pt/en/split-suede-leather-loafer-l12400850?pelement=61733751",
-      "image": "assets/autumn/pieces/shoe-suede-loafer-brown.jpg",
-      "imageAlt": "Massimo Dutti Split suede leather loafer, brown",
-      "price": 89.95,
+      "shopQuery": "Massimo Dutti Split suede leather ankle boot BROWN",
+      "shopUrl": "https://www.massimodutti.com/pt/en/split-suede-leather-ankle-boot-l12018850?pelement=64176333&colorId=700",
+      "image": "assets/autumn/pieces/shoe-suede-ankle-boot-brown.jpg",
+      "imageAlt": "Massimo Dutti Split suede leather ankle boot, BROWN",
+      "price": 129,
       "currency": "EUR",
-      "priceLabel": "89,95 €"
+      "priceLabel": "129 €"
     }
   ],
   "combos": [
     {
-      "id": "combo-autumn-everyday",
-      "formulaId": "everyday-casual",
+      "id": "combo-autumn-1",
+      "formulaId": "budget-henley",
       "pieceIds": [
-        "top-purl-knit-navy",
-        "outer-bomber-brown",
-        "bot-straight-jeans-blue",
-        "shoe-leather-trainers-brown"
+        "top-henley-white",
+        "outer-checked-shirt-brown",
+        "bot-barrel-jeans-navy",
+        "shoe-trainers-white"
       ],
-      "why": "Relaxed look for dry 15–20 °C days.",
+      "why": "Henley + slightly cropped check shirt as the casual base over dark-indigo barrel jeans (indigo beats black) and white leather trainers; all-cotton tops and denim.",
       "budget": "budget",
-      "totalLabel": "135,88 €",
-      "image": "assets/autumn/everyday-casual.png",
-      "imageAlt": "Everyday casual: navy purl-knit jumper, brown leather-effect bomber, blue straight-leg jeans, brown leather trainers"
+      "totalLabel": "127,92 €",
+      "image": "assets/autumn/outfit-1.png",
+      "imageAlt": "Budget: henley + flannel + indigo barrel jeans: White Long sleeve Henley T-shirt, Brown Checked long sleeve shirt, Navy Front seam barrel jeans, White Leather trainers"
     },
     {
-      "id": "combo-autumn-rainy",
-      "formulaId": "rainy-cooler",
+      "id": "combo-autumn-2",
+      "formulaId": "mid-cream-halfzip",
       "pieceIds": [
-        "top-wool-quarter-zip-navy",
-        "outer-trench-camel",
-        "bot-slim-chinos-navy",
-        "shoe-chelsea-boots-black"
+        "top-quarter-zip-ecru",
+        "outer-waxed-jacket-brown",
+        "bot-barrel-drawstring-brown",
+        "shoe-leather-boots-brown"
       ],
-      "why": "All Zara — try on at Espaço Guimarães.",
-      "budget": "premium",
-      "totalLabel": "205,80 €",
-      "image": "assets/autumn/rainy-cooler.png",
-      "imageAlt": "Rainy cooler day: navy wool quarter-zip, camel water-repellent trench, navy slim chinos, black leather Chelsea boots"
+      "why": "Close to the top Pinterest look (cream half-zip + relaxed brown trousers) but rain-proofed with a waxed-effect cotton jacket and rubber-soled leather boots for Guimarães showers.",
+      "budget": "mid",
+      "totalLabel": "225,84 €",
+      "image": "assets/autumn/outfit-2.png",
+      "imageAlt": "Mid: cream half-zip + brown trousers, rain-ready: Mid-ecru Purl knit quarter-zip jumper, Dark brown Waxed-effect regular fit jacket, Brown Barrel fit drawstring trousers, Brown Leather boots",
+      "wasTotalLabel": "249,80 €",
+      "savingLabel": "23,96 €"
     },
     {
-      "id": "combo-autumn-date",
-      "formulaId": "smart-casual-date",
+      "id": "combo-autumn-3",
+      "formulaId": "premium-wool-cable",
       "pieceIds": [
-        "top-merino-polo-navy",
-        "outer-wool-blazer-brown",
-        "bot-slim-pants-beige",
-        "shoe-suede-loafer-brown"
+        "top-polo-knit-brown-marl",
+        "outer-corduroy-jacket-brown",
+        "bot-barrel-pants-beige",
+        "shoe-suede-ankle-boot-brown"
       ],
-      "why": "Suede loafers dislike rain; swap in the Leather Chelsea Boots on wet nights.",
+      "why": "Ribbed-texture collared knit (both on the trend list), 100% cotton, on sale. Trade-off: cotton instead of 100% wool and no cable.",
       "budget": "premium",
-      "totalLabel": "408,85 €",
-      "image": "assets/autumn/smart-casual-date.png",
-      "imageAlt": "Smart-casual date: navy merino knit polo, brown wool-blend blazer, beige cotton-blend pants, brown split suede loafers"
+      "totalLabel": "324,85 €",
+      "image": "assets/autumn/outfit-3.png",
+      "imageAlt": "Premium: ribbed collared knit + corduroy + cream pleated barrel: BROWN MARL Button-detail polo knit sweater, BROWN Corduroy jacket with pocket detail, BEIGE Barrel fit pants with pleat detail, BROWN Split suede leather ankle boot",
+      "wasTotalLabel": "378,85 €",
+      "savingLabel": "54 €"
     }
-  ]
+  ],
+  "priceSummary": {
+    "totalLabel": "678,61 €",
+    "wasTotalLabel": "756,57 €",
+    "savingLabel": "77,96 €"
+  }
 }

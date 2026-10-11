@@ -7,12 +7,16 @@ Personal outfit builder for casual men's summer 2026 looks from Inditex brands
 **Live:** https://dong-xuyong.github.io/summer-outfits-2026/
 
 Autumn 2026 is a second page (`autumn.html`) with the same search, filters, and
-Top / Outer / Bottom / Shoes layout. It lists three looks with full EUR prices from
-the brands' Portugal sites (verified 11 Oct 2026):
+Top / Outer / Bottom / Shoes layout. The looks follow the
+[men's autumn outfits 2026 report](https://dong-xuyong.github.io/last30days-archive/#/report/men-s-autumn-outfits-2026-v3):
+cream and brown, relaxed trousers, natural fabrics. Prices in EUR from the
+brands' Portugal sites, checked 11 Oct 2026. Two pieces are on sale; the other prices are full price:
 
-- Everyday casual — 135,88 €
-- Rainy cooler day — 205,80 € (all Zara; try on at Espaço Guimarães)
-- Smart-casual date — 408,85 € (all Massimo Dutti)
+- Budget: henley + flannel + indigo barrel jeans — 127,92 €
+- Mid: cream half-zip + brown trousers, rain-ready — 225,84 € (was 249,80 €)
+- Premium: ribbed collared knit + corduroy + cream pleated barrel — 324,85 € (was 378,85 €)
+
+Together the three looks are 678,61 € instead of 756,57 €, a saving of 77,96 €.
 
 Catalog: `data/autumn-catalog.json`. Outfit collages and piece photos live in
 `assets/autumn/` (local copies, not hotlinked).
