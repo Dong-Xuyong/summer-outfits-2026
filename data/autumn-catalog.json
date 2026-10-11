@@ -2,7 +2,7 @@
   "sourceReport": "https://dong-xuyong.github.io/last30days-archive/#/report/men-s-autumn-outfits-2026-v3",
   "title": "Autumn Outfits 2026",
   "retailGroup": "Inditex",
-  "shopNote": "Portugal product pages · full price, checked 11 Oct 2026",
+  "shopNote": "Portugal product pages · prices checked 11 Oct 2026",
   "brands": [
     "Zara",
     "Pull&Bear",
@@ -15,7 +15,10 @@
     "Massimo Dutti ankle boot: colour 700 (dark brown, ref 12020850) chosen; the page also has a lighter Brown (732).",
     "Bershka check shirt is boxy/cropped with a back graphic; fabric is 100% cotton but Bershka does not call it flannel.",
     "Barrel jeans/pants run roomy: try one size down if between sizes.",
-    "Navy Zara wool quarter-zip and Massimo Dutti navy merino polo from v1 were not reused: v2 leans on the cream + brown palette; both still pair with outfits 2/3 if wanted."
+    "Navy Zara wool quarter-zip and Massimo Dutti navy merino polo from v1 were not reused: v2 leans on the cream + brown palette; both still pair with outfits 2/3 if wanted.",
+    "Sale prices can end or sell out at any time; stock is online stock at check time.",
+    "Zara barrel drawstring trousers are cut very wide on the model; try one size down.",
+    "Massimo Dutti swap trades the 100% wool cable half-zip for a 100% cotton ribbed polo knit."
   ],
   "formulas": [
     {
@@ -118,12 +121,11 @@
           "brown"
         ],
         "bottom": [
-          "washed",
-          "relaxed",
-          "fit",
-          "chino",
+          "barrel",
+          "drawstring",
           "trousers",
-          "brown"
+          "brown",
+          "cotton"
         ],
         "shoes": [
           "leather",
@@ -134,34 +136,28 @@
     },
     {
       "id": "premium-wool-cable",
-      "name": "Premium: wool cable half-zip + corduroy + cream pleated barrel",
-      "blurb": "Fisherman cable-knit half-zip in 100% wool, corduroy workwear jacket and pleated cream barrel trousers in the cream + brown palette, all natural fibres.",
+      "name": "Premium: ribbed collared knit + corduroy + cream pleated barrel",
+      "blurb": "Ribbed-texture collared knit (both on the trend list), 100% cotton, on sale. Trade-off: cotton instead of 100% wool and no cable.",
       "tags": [
-        "wool",
-        "cable",
-        "half-zip",
+        "ribbed",
+        "collared",
+        "knit",
         "corduroy",
         "cream",
         "pleated",
         "barrel",
-        "fisherman",
-        "cable-knit",
-        "100",
-        "workwear",
-        "jacket",
-        "trousers",
-        "brown",
-        "palette",
-        "natural",
-        "fibres"
+        "cotton",
+        "sale"
       ],
       "slots": {
         "top": [
-          "wool",
-          "cable",
+          "polo",
           "knit",
           "sweater",
-          "mink"
+          "ribbed",
+          "cotton",
+          "brown",
+          "marl"
         ],
         "outer": [
           "corduroy",
@@ -363,9 +359,9 @@
       "priceLabel": "79,95 €"
     },
     {
-      "id": "bot-relaxed-chino-brown",
+      "id": "bot-barrel-drawstring-brown",
       "slot": "bottom",
-      "name": "Washed relaxed fit chino trousers",
+      "name": "Barrel fit drawstring trousers",
       "fabric": "100% cotton",
       "colors": [
         "Brown"
@@ -376,20 +372,22 @@
         "Zara"
       ],
       "tags": [
-        "washed",
-        "relaxed",
-        "fit",
-        "chino",
+        "barrel",
+        "drawstring",
         "trousers",
-        "brown"
+        "brown",
+        "cotton"
       ],
-      "shopQuery": "Zara Washed relaxed fit chino trousers Brown",
-      "shopUrl": "https://www.zara.com/pt/en/washed-relaxed-fit-chino-trousers-p04365461.html?v1=545494770",
-      "image": "assets/autumn/pieces/bot-relaxed-chino-brown.jpg",
-      "imageAlt": "Zara Washed relaxed fit chino trousers, Brown",
-      "price": 39.95,
+      "shopQuery": "Zara Barrel fit drawstring trousers Brown",
+      "shopUrl": "https://www.zara.com/pt/en/barrel-fit-drawstring-trousers-p00108313.html?v1=545447518",
+      "image": "assets/autumn/pieces/bot-barrel-drawstring-brown.jpg",
+      "imageAlt": "Zara Barrel fit drawstring trousers, Brown",
+      "price": 15.99,
       "currency": "EUR",
-      "priceLabel": "39,95 €"
+      "priceLabel": "15,99 €",
+      "wasPrice": 29.95,
+      "wasPriceLabel": "29,95 €",
+      "discountLabel": "-46%"
     },
     {
       "id": "shoe-leather-boots-brown",
@@ -418,32 +416,36 @@
       "priceLabel": "89,95 €"
     },
     {
-      "id": "top-wool-cable-mink",
+      "id": "top-polo-knit-brown-marl",
       "slot": "top",
-      "name": "100% wool cable-knit sweater",
-      "fabric": "100% wool",
+      "name": "Button-detail polo knit sweater",
+      "fabric": "100% cotton",
       "colors": [
-        "MINK"
+        "BROWN MARL"
       ],
       "colorFamily": "warm",
-      "budget": "mid",
+      "budget": "budget",
       "brands": [
         "Massimo Dutti"
       ],
       "tags": [
-        "wool",
-        "cable",
+        "polo",
         "knit",
         "sweater",
-        "mink"
+        "ribbed",
+        "cotton",
+        "brown",
+        "marl"
       ],
-      "shopQuery": "Massimo Dutti 100% wool cable-knit sweater MINK",
-      "shopUrl": "https://www.massimodutti.com/pt/en/100-wool-cableknit-sweater-l01416222?pelement=63726144&colorId=779",
-      "image": "assets/autumn/pieces/top-wool-cable-mink.jpg",
-      "imageAlt": "Massimo Dutti 100% wool cable-knit sweater, MINK",
-      "price": 89.95,
+      "shopQuery": "Massimo Dutti Button-detail polo knit sweater BROWN MARL",
+      "shopUrl": "https://www.massimodutti.com/pt/en/buttondetail-polo-knit-sweater-l01376201?pelement=62129830&colorId=724",
+      "image": "assets/autumn/pieces/top-polo-knit-brown-marl.jpg",
+      "imageAlt": "Massimo Dutti Button-detail polo knit sweater, BROWN MARL",
+      "price": 35.95,
       "currency": "EUR",
-      "priceLabel": "89,95 €"
+      "priceLabel": "35,95 €",
+      "wasPrice": 49.95,
+      "wasPriceLabel": "49,95 €"
     },
     {
       "id": "outer-corduroy-jacket-brown",
@@ -556,29 +558,38 @@
       "pieceIds": [
         "top-quarter-zip-ecru",
         "outer-waxed-jacket-brown",
-        "bot-relaxed-chino-brown",
+        "bot-barrel-drawstring-brown",
         "shoe-leather-boots-brown"
       ],
       "why": "Close to the top Pinterest look (cream half-zip + relaxed brown trousers) but rain-proofed with a waxed-effect cotton jacket and rubber-soled leather boots for Guimarães showers.",
       "budget": "mid",
-      "totalLabel": "249,80 €",
+      "totalLabel": "225,84 €",
       "image": "assets/autumn/outfit-2.png",
-      "imageAlt": "Mid: cream half-zip + brown trousers, rain-ready: Mid-ecru Purl knit quarter-zip jumper, Dark brown Waxed-effect regular fit jacket, Brown Washed relaxed fit chino trousers, Brown Leather boots"
+      "imageAlt": "Mid: cream half-zip + brown trousers, rain-ready: Mid-ecru Purl knit quarter-zip jumper, Dark brown Waxed-effect regular fit jacket, Brown Barrel fit drawstring trousers, Brown Leather boots",
+      "wasTotalLabel": "249,80 €",
+      "savingLabel": "23,96 €"
     },
     {
       "id": "combo-autumn-3",
       "formulaId": "premium-wool-cable",
       "pieceIds": [
-        "top-wool-cable-mink",
+        "top-polo-knit-brown-marl",
         "outer-corduroy-jacket-brown",
         "bot-barrel-pants-beige",
         "shoe-suede-ankle-boot-brown"
       ],
-      "why": "Fisherman cable-knit half-zip in 100% wool, corduroy workwear jacket and pleated cream barrel trousers in the cream + brown palette, all natural fibres.",
+      "why": "Ribbed-texture collared knit (both on the trend list), 100% cotton, on sale. Trade-off: cotton instead of 100% wool and no cable.",
       "budget": "premium",
-      "totalLabel": "378,85 €",
+      "totalLabel": "324,85 €",
       "image": "assets/autumn/outfit-3.png",
-      "imageAlt": "Premium: wool cable half-zip + corduroy + cream pleated barrel: MINK 100% wool cable-knit sweater, BROWN Corduroy jacket with pocket detail, BEIGE Barrel fit pants with pleat detail, BROWN Split suede leather ankle boot"
+      "imageAlt": "Premium: ribbed collared knit + corduroy + cream pleated barrel: BROWN MARL Button-detail polo knit sweater, BROWN Corduroy jacket with pocket detail, BEIGE Barrel fit pants with pleat detail, BROWN Split suede leather ankle boot",
+      "wasTotalLabel": "378,85 €",
+      "savingLabel": "54 €"
     }
-  ]
+  ],
+  "priceSummary": {
+    "totalLabel": "678,61 €",
+    "wasTotalLabel": "756,57 €",
+    "savingLabel": "77,96 €"
+  }
 }

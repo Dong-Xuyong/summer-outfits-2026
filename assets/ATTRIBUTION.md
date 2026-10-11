@@ -18,9 +18,9 @@ Piece photo sources (downloaded; the pages do not hotlink these URLs):
 - Zara Leather trainers — `static.zara.net` `12227720001-e2`
 - Zara Purl knit quarter-zip jumper — `static.zara.net` `03332310715-e1`
 - Zara Waxed-effect regular fit jacket — `static.zara.net` `01437365716-e1`
-- Zara Washed relaxed fit chino trousers — `static.zara.net` `04365461700-e1`
+- Zara Barrel fit drawstring trousers — `static.zara.net` `00108313700-e1`
 - Zara Leather boots — `static.zara.net` `12094720700-000-e2`
-- Massimo Dutti 100% wool cable-knit sweater — `static.massimodutti.net` `01416222779-o1`
+- Massimo Dutti Button-detail polo knit sweater — `static.massimodutti.net` `01376201724-o1`
 - Massimo Dutti Corduroy jacket with pocket detail — `static.massimodutti.net` `03257417700-o1`
 - Massimo Dutti Barrel fit pants with pleat detail — `static.massimodutti.net` `00181015710-o1`
 - Massimo Dutti Split suede leather ankle boot — `static.massimodutti.net` `12020850700-o10`

@@ -426,8 +426,14 @@
     const shopHref = piece.shopUrl || "#";
     const lockedClass = piece.locked ? " is-locked" : "";
     const priceText = piece.priceLabel || (piece.price != null && piece.price !== "" ? String(piece.price) : "");
+    const was = piece.wasPriceLabel
+      ? `<s class="slot-price-was">${escapeHtml(piece.wasPriceLabel)}</s> `
+      : "";
+    const discount = piece.discountLabel
+      ? ` <span class="slot-discount">${escapeHtml(piece.discountLabel)}</span>`
+      : "";
     const priceSpan = priceText
-      ? ` · <span class="slot-price">${escapeHtml(priceText)}</span>`
+      ? ` · <span class="slot-price">${was}${escapeHtml(priceText)}${discount}</span>`
       : "";
     return `
       <article class="slot-section${lockedClass}">
@@ -465,8 +471,14 @@
     const ordered = orderedPieces(pieces);
     const kicker = featured ? "Recommended look" : "Alternate look";
     const title = formula?.name || "Outfit";
+    const wasTotal = combo.wasTotalLabel
+      ? `<s class="combo-total-was">${escapeHtml(combo.wasTotalLabel)}</s> `
+      : "";
+    const saving = combo.savingLabel
+      ? `<span class="combo-saving">Save ${escapeHtml(combo.savingLabel)}</span>`
+      : "";
     const total = combo.totalLabel
-      ? `<p class="combo-total"><span class="combo-total-label">Full price</span> ${escapeHtml(combo.totalLabel)}</p>`
+      ? `<p class="combo-total"><span class="combo-total-label">Total</span> ${wasTotal}${escapeHtml(combo.totalLabel)}${saving}</p>`
       : "";
     return `
       <article class="combo ${featured ? "featured" : "alt"}">
@@ -528,6 +540,7 @@
         : "market search links open Google Shopping";
     const meta = `${matches.length} look${matches.length === 1 ? "" : "s"} · ${shopNote}`;
     let html = `<p class="results-meta">${escapeHtml(meta)}</p>`;
+    html += renderPriceSummary(catalog, matches);
     if (state.lockedPiece) html += renderLockedBanner(state.lockedPiece);
     html += renderCombo(featured, { featured: true });
     if (rest.length) {
@@ -536,6 +549,17 @@
     }
     root.innerHTML = html;
     wireBannerClear();
+  }
+
+  function renderPriceSummary(catalog, matches) {
+    const summary = catalog.priceSummary;
+    if (!summary || !summary.totalLabel || !summary.savingLabel) return "";
+    if (state.lockedPiece) return "";
+    if (!Array.isArray(catalog.combos) || matches.length !== catalog.combos.length) return "";
+    const was = summary.wasTotalLabel
+      ? ` <s class="combo-total-was">${escapeHtml(summary.wasTotalLabel)}</s>`
+      : "";
+    return `<p class="price-summary">All three looks <strong>${escapeHtml(summary.totalLabel)}</strong>${was} · save ${escapeHtml(summary.savingLabel)} versus full price</p>`;
   }
 
   function renderPatterns(catalog) {
