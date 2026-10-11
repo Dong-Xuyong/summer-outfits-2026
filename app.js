@@ -1,8 +1,17 @@
 (() => {
   "use strict";
 
-  const SLOT_ORDER = ["top", "bottom", "shoes", "accessory"];
-  const SLOT_LABELS = { top: "Top", bottom: "Bottom", shoes: "Shoes", accessory: "Accessory" };
+  const SLOT_ORDER = ["top", "outer", "bottom", "shoes", "accessory"];
+  const SLOT_LABELS = {
+    top: "Top",
+    outer: "Outer",
+    bottom: "Bottom",
+    shoes: "Shoes",
+    accessory: "Accessory",
+  };
+  const catalogUrl =
+    (document.currentScript && document.currentScript.getAttribute("data-catalog")) ||
+    "data/catalog.json";
   const CORE_SLOTS = ["top", "bottom", "shoes"];
   const BUDGETS = ["all", "budget", "mid", "premium"];
   const COLORS = ["all", "neutral", "warm"];
@@ -175,6 +184,17 @@
     return pool.map((x) => x.p);
   }
 
+  function pickHintedSlot(catalog, slot, formula, usedIds) {
+    const hints = (formula.slots && formula.slots[slot]) || [];
+    if (!hints.length) return null;
+    const ranked = catalog.pieces
+      .filter((p) => p.slot === slot && !usedIds.has(p.id) && piecePassesBudget(p))
+      .map((p) => ({ p, s: scorePieceCandidate(p, formula, hints) }))
+      .sort((a, b) => b.s - a.s);
+    if (!ranked.length || ranked[0].s < 7) return null;
+    return ranked[0].p;
+  }
+
   function pickAccessory(catalog, formula, usedIds) {
     const hints = (formula.slots && formula.slots.accessory) || [];
     const ranked = catalog.pieces
@@ -226,6 +246,13 @@
           const used = new Set([locked.id, ...picked.map((p) => p.id)]);
           const acc = pickAccessory(catalog, formula, used);
           if (acc) bySlot.accessory = acc;
+        }
+
+        if (locked.slot !== "outer") {
+          const used = new Set([locked.id, ...picked.map((p) => p.id)]);
+          if (bySlot.accessory) used.add(bySlot.accessory.id);
+          const outer = pickHintedSlot(catalog, "outer", formula, used);
+          if (outer) bySlot.outer = outer;
         }
 
         if (!bySlot.top || !bySlot.bottom || !bySlot.shoes) continue;
@@ -367,7 +394,16 @@
     `;
   }
 
-  function renderLookStage(ordered) {
+  function renderLookStage(ordered, combo) {
+    const photo = combo && combo.image;
+    if (photo) {
+      const alt = combo.imageAlt || "Outfit photo";
+      return `
+        <div class="look-stage look-stage--photo" aria-label="Outfit preview">
+          <img class="look-photo" src="${escapeHtml(photo)}" alt="${escapeHtml(alt)}" loading="lazy" />
+        </div>
+      `;
+    }
     return `
       <div class="look-stage" aria-label="Outfit preview">
         ${ordered.map(renderLookLayer).join("")}
@@ -429,18 +465,22 @@
     const ordered = orderedPieces(pieces);
     const kicker = featured ? "Recommended look" : "Alternate look";
     const title = formula?.name || "Outfit";
+    const total = combo.totalLabel
+      ? `<p class="combo-total"><span class="combo-total-label">Full price</span> ${escapeHtml(combo.totalLabel)}</p>`
+      : "";
     return `
       <article class="combo ${featured ? "featured" : "alt"}">
         <header class="combo-header">
           <p class="combo-kicker">${kicker}</p>
           <h2 class="combo-title">${escapeHtml(title)}</h2>
+          ${total}
           <p class="combo-why">${escapeHtml(combo.why)}</p>
           <div class="combo-badges">
             <span class="badge">${escapeHtml(combo.budget || "mixed")}</span>
             ${(formula?.tags || []).slice(0, 3).map((t) => `<span class="badge">${escapeHtml(t)}</span>`).join("")}
           </div>
         </header>
-        ${renderLookStage(ordered)}
+        ${renderLookStage(ordered, combo)}
         <div class="slot-stack">
           ${ordered.map(renderSlot).join("")}
         </div>
@@ -481,9 +521,11 @@
     }
 
     const [featured, ...rest] = matches;
-    const shopNote = isInditexFocused(catalog)
-      ? "Inditex brand shop links"
-      : "market search links open Google Shopping";
+    const shopNote = catalog.shopNote
+      ? catalog.shopNote
+      : isInditexFocused(catalog)
+        ? "Inditex brand shop links"
+        : "market search links open Google Shopping";
     const meta = `${matches.length} look${matches.length === 1 ? "" : "s"} · ${shopNote}`;
     let html = `<p class="results-meta">${escapeHtml(meta)}</p>`;
     if (state.lockedPiece) html += renderLockedBanner(state.lockedPiece);
@@ -629,7 +671,7 @@
     wireProductForm();
 
     try {
-      const res = await fetch("data/catalog.json");
+      const res = await fetch(catalogUrl);
       if (!res.ok) throw new Error(`HTTP ${res.status}`);
       state.catalog = await res.json();
       renderPatterns(state.catalog);
