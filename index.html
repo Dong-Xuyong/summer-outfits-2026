@@ -3,34 +3,38 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-  <meta name="theme-color" content="#e8ebe6" />
+  <meta name="theme-color" content="#f6f4ef" />
   <meta name="description" content="Build casual men's summer 2026 outfits from Inditex brands — search occasions or paste a product link (local resolver) for Top / Bottom / Shoes / Accessories combos with shop links." />
   <title>Outfit Builder</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Encode+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <script src="dong-ui/theme.js"></script>
   <link rel="stylesheet" href="dong-ui/theme.css?v=2" />
-  <link rel="stylesheet" href="styles.css?v=3" />
+  <link rel="stylesheet" href="/ui/shell.css?v=1" />
+  <link rel="stylesheet" href="styles.css?v=6" />
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>☀</text></svg>" />
 </head>
-<body>
-  <div id="app">
-    <header class="topbar">
-      <a class="brand" href="#">Outfit Builder</a>
-      <a class="dong-home-link" href="https://dong-xuyong.github.io/" aria-label="Back to all apps" title="All apps"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V20a1 1 0 0 0 1 1h4v-6h4v6h4a1 1 0 0 0 1-1V9.5"/></svg></a>
+<body class="dx">
+  <header class="dx-header">
+    <a class="dx-home" href="/" aria-label="Home">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg>
+    </a>
+    <h1 class="dx-title">Outfit Builder</h1>
+    <div class="dx-actions">
       <button type="button" data-dong-theme-toggle aria-label="Toggle color theme"></button>
-    </header>
+    </div>
+  </header>
 
-    <main>
-      <nav class="season-nav" aria-label="Season">
-        <a class="chip active" href="index.html" aria-current="page">Summer</a>
-        <a class="chip" href="autumn.html">Autumn</a>
-      </nav>
+  <nav class="dx-tabs" aria-label="Season">
+    <a class="dx-tab" href="index.html" aria-current="page">Summer</a>
+    <a class="dx-tab" href="autumn.html">Autumn</a>
+  </nav>
 
-      <section class="hero" aria-labelledby="hero-title">
+  <main class="dx-main" id="app">
+      <section class="hero dx-card" aria-labelledby="hero-title">
         <p class="hero-brand">Summer Outfits 2026</p>
-        <h1 id="hero-title">Build the look. Shop the pieces.</h1>
+        <h2 id="hero-title">Build the look. Shop the pieces.</h2>
         <p class="hero-sub">Casual men's summer 2026 looks built from Inditex — Zara, Pull&amp;Bear, Massimo Dutti, Bershka, Stradivarius, Oysho, Lefties. Search an occasion, or paste a product link (accessories included) when running the local resolver, to get a full combo with brand shop links.</p>
         <form id="search-form" class="search-form" role="search">
           <label class="sr-only" for="search-input">Search outfits</label>
@@ -51,7 +55,7 @@
         <p id="product-status" class="product-status" role="status" aria-live="polite"></p>
       </section>
 
-      <section class="filters" aria-label="Filters">
+      <section class="filters dx-card" aria-label="Filters">
         <div class="filter-row">
           <span class="filter-label">Occasion</span>
           <div id="occasion-chips" class="chips" role="listbox" aria-label="Occasion"></div>
@@ -70,11 +74,11 @@
         </div>
       </section>
 
-      <section id="results" class="results" aria-live="polite">
+      <section id="results" class="results dx-card" aria-live="polite">
         <p class="loading">Loading catalog…</p>
       </section>
 
-      <section class="patterns" aria-labelledby="patterns-title">
+      <section class="patterns dx-card" aria-labelledby="patterns-title">
         <h2 id="patterns-title">Capsule rules</h2>
         <ol id="patterns-list"></ol>
         <p class="source-link">
@@ -84,8 +88,7 @@
           </a>
         </p>
       </section>
-    </main>
-  </div>
+  </main>
   <script src="app.js?v=3"></script>
 </body>
 </html>

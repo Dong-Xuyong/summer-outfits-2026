@@ -1,37 +1,24 @@
-/* Summer Outfits 2026 — linen/stone + deep teal */
+/* Outfit Builder — colours, type, and cards follow the hub shell (/ui/shell.css). */
 
 :root {
-  --so-bg: #e8ebe6;
-  --so-bg-deep: #d8ddd6;
-  --so-ink: #1a221c;
-  --so-ink-soft: #3d4a40;
-  --so-mute: #5c6b60;
-  --so-surface: #f4f6f3;
-  --so-line: rgba(26, 34, 28, 0.12);
-  --so-teal: #0f5c56;
-  --so-teal-soft: rgba(15, 92, 86, 0.12);
-  --so-sand: #c4b49a;
-  --so-font: "DM Sans", var(--font-sans);
-  --so-display: "Fraunces", Georgia, serif;
+  --so-bg: var(--dx-bg);
+  --so-bg-deep: var(--dx-bg);
+  --so-ink: var(--dx-fg);
+  --so-ink-soft: var(--dx-fg);
+  --so-mute: var(--dx-muted);
+  --so-surface: var(--dx-card-solid);
+  --so-line: var(--dx-border);
+  --so-teal: var(--dx-primary);
+  --so-teal-soft: var(--dx-primary-soft);
+  --so-sand: var(--dx-muted);
+  --so-font: var(--dx-font);
+  --so-display: var(--dx-font);
 
-  --bg: var(--so-bg);
-  --text: var(--so-ink);
-  --text-dim: var(--so-ink-soft);
-  --text-mute: var(--so-mute);
-  --app-accent: var(--so-teal);
-}
-
-html.dark {
-  --so-bg: #121816;
-  --so-bg-deep: #1a221e;
-  --so-ink: #eef2ee;
-  --so-ink-soft: #c5cfc7;
-  --so-mute: #8a978e;
-  --so-surface: #1c2621;
-  --so-line: rgba(238, 242, 238, 0.12);
-  --so-teal: #3dbaad;
-  --so-teal-soft: rgba(61, 186, 173, 0.16);
-  --so-sand: #8a7a62;
+  --bg: var(--dx-bg);
+  --text: var(--dx-fg);
+  --text-dim: var(--dx-muted);
+  --text-mute: var(--dx-muted);
+  --app-accent: var(--dx-primary);
 }
 
 *,
@@ -47,13 +34,9 @@ html {
 body {
   margin: 0;
   min-height: 100vh;
-  font-family: var(--so-font);
-  color: var(--so-ink);
-  background:
-    radial-gradient(ellipse 80% 50% at 10% -10%, rgba(15, 92, 86, 0.1), transparent 55%),
-    radial-gradient(ellipse 60% 40% at 90% 0%, rgba(196, 180, 154, 0.22), transparent 50%),
-    linear-gradient(180deg, var(--so-bg) 0%, var(--so-bg-deep) 100%);
-  background-attachment: fixed;
+  font-family: var(--dx-font);
+  color: var(--dx-fg);
+  background: transparent;
 }
 
 .sr-only {
@@ -67,47 +50,19 @@ body {
   border: 0;
 }
 
-#app {
-  max-width: 720px;
-  margin: 0 auto;
-  padding: 0 1.25rem 4rem;
+main.dx-main > .dx-card + .dx-card {
+  margin-top: var(--dx-gap);
 }
 
-/* —— Topbar —— */
-.topbar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 1rem 0;
-  position: sticky;
-  top: 0;
-  z-index: 10;
-  background: color-mix(in srgb, var(--so-bg) 82%, transparent);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-}
-
-.topbar .dong-theme-toggle {
+/* theme.css pins the toggle with higher specificity than the shell's :where() rule. */
+.dx-header .dong-theme-toggle {
   position: static;
   flex-shrink: 0;
 }
 
-.brand {
-  font-family: var(--so-display);
-  font-weight: 600;
-  font-size: 1.05rem;
-  color: var(--so-ink);
-  text-decoration: none;
-  letter-spacing: -0.02em;
-}
-
-.brand:hover {
-  color: var(--so-teal);
-}
-
 /* —— Hero —— */
 .hero {
-  padding: 2.5rem 0 1.75rem;
+  padding: 0.15rem 0 0;
   animation: fadeUp 0.55s ease both;
 }
 
@@ -121,14 +76,14 @@ body {
   line-height: 1.1;
 }
 
-.hero h1 {
+.hero h2 {
   margin: 0 0 0.65rem;
-  font-family: var(--so-display);
+  font-family: var(--dx-font);
   font-size: clamp(1.35rem, 3.5vw, 1.65rem);
-  font-weight: 550;
+  font-weight: 600;
   letter-spacing: -0.02em;
   line-height: 1.25;
-  color: var(--so-ink);
+  color: var(--dx-fg);
 }
 
 .hero-sub {
@@ -141,13 +96,6 @@ body {
 
 .hero-sub--wide {
   max-width: 46ch;
-}
-
-.season-nav {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.4rem;
-  padding-top: 0.85rem;
 }
 
 a.chip {
@@ -167,9 +115,10 @@ a.chip {
   min-width: 0;
   padding: 0.85rem 1rem;
   border: 1px solid var(--so-line);
-  border-radius: 0.65rem;
-  background: var(--so-surface);
-  color: var(--so-ink);
+  min-height: 44px;
+  border-radius: var(--dx-radius-sm);
+  background: var(--dx-card-solid);
+  color: var(--dx-fg);
   font: inherit;
   font-size: 1rem;
   outline: none;
@@ -186,20 +135,17 @@ a.chip {
 }
 
 .btn-primary {
+  min-height: 44px;
   padding: 0.85rem 1.25rem;
   border: none;
-  border-radius: 0.65rem;
-  background: var(--so-teal);
-  color: #f4faf9;
+  border-radius: var(--dx-radius-sm);
+  background: var(--dx-primary);
+  color: var(--dx-primary-fg);
   font: inherit;
   font-weight: 600;
   font-size: 0.95rem;
   cursor: pointer;
   transition: transform 0.15s, opacity 0.15s;
-}
-
-html.dark .btn-primary {
-  color: #0a1614;
 }
 
 .btn-primary:hover {
@@ -211,11 +157,12 @@ html.dark .btn-primary {
 }
 
 .btn-secondary {
+  min-height: 44px;
   padding: 0.85rem 1.25rem;
-  border: 1px solid var(--so-ink-soft);
-  border-radius: 0.65rem;
-  background: transparent;
-  color: var(--so-ink);
+  border: 1px solid var(--dx-border);
+  border-radius: var(--dx-radius-sm);
+  background: var(--dx-card-solid);
+  color: var(--dx-fg);
   font: inherit;
   font-weight: 600;
   font-size: 0.95rem;
@@ -246,9 +193,10 @@ html.dark .btn-primary {
   min-width: 0;
   padding: 0.85rem 1rem;
   border: 1px solid var(--so-line);
-  border-radius: 0.65rem;
-  background: var(--so-surface);
-  color: var(--so-ink);
+  min-height: 44px;
+  border-radius: var(--dx-radius-sm);
+  background: var(--dx-card-solid);
+  color: var(--dx-fg);
   font: inherit;
   font-size: 1rem;
   outline: none;
@@ -298,14 +246,15 @@ html.dark .product-status.is-error {
 
 .locked-banner .btn-secondary {
   margin-left: auto;
-  padding: 0.35rem 0.7rem;
-  font-size: 0.78rem;
-  border-color: var(--so-line);
+  min-height: 44px;
+  padding: 0.5rem 0.85rem;
+  font-size: 0.85rem;
+  border-color: var(--dx-border);
 }
 
 /* —— Filters —— */
 .filters {
-  padding: 0.5rem 0 1.5rem;
+  padding: 0.15rem 0 0;
   animation: fadeUp 0.55s ease 0.08s both;
 }
 
@@ -331,13 +280,21 @@ html.dark .product-status.is-error {
 }
 
 .chip {
-  padding: 0.4rem 0.75rem;
-  border: 1px solid var(--so-line);
+  display: inline-flex;
+  align-items: center;
+  max-width: 100%;
+  min-height: 44px;
+  padding: 0.4rem 0.85rem;
+  border: 1px solid var(--dx-border);
   border-radius: 999px;
-  background: transparent;
-  color: var(--so-ink-soft);
+  background: var(--dx-card-solid);
+  color: var(--dx-fg);
   font: inherit;
   font-size: 0.85rem;
+  line-height: 1.25;
+  white-space: normal;
+  overflow-wrap: anywhere;
+  text-align: left;
   cursor: pointer;
   transition: background 0.15s, border-color 0.15s, color 0.15s;
 }
@@ -509,7 +466,7 @@ html.dark .product-status.is-error {
 .look-stage.look-stage--photo {
   width: min(100%, 440px);
   aspect-ratio: 1200 / 1648;
-  background: #f7f7f5;
+  background: var(--dx-card-solid);
 }
 
 .look-stage--photo .look-photo {
@@ -743,11 +700,13 @@ html.dark .product-status.is-error {
 .btn-shop {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 0.35rem;
+  min-height: 44px;
   padding: 0.5rem 0.9rem;
-  border-radius: 0.5rem;
-  background: var(--so-ink);
-  color: var(--so-bg);
+  border-radius: var(--dx-radius-sm);
+  background: var(--dx-fg);
+  color: var(--dx-bg);
   font: inherit;
   font-size: 0.85rem;
   font-weight: 600;
@@ -803,9 +762,9 @@ html.dark .product-status.is-error {
 
 /* —— Patterns footer —— */
 .patterns {
-  margin-top: 3rem;
-  padding-top: 2rem;
-  border-top: 1px solid var(--so-line);
+  margin-top: 0;
+  padding-top: 0.15rem;
+  border-top: 0;
   animation: fadeUp 0.55s ease 0.2s both;
 }
 
@@ -860,6 +819,27 @@ html.dark .product-status.is-error {
     opacity: 1;
     transform: translateX(0);
   }
+}
+
+.slot-name,
+.combo-title,
+.hero-sub,
+.hero-brand,
+.slot-meta,
+.combo-why,
+.price-summary,
+.source-link,
+.product-status,
+.results-meta {
+  overflow-wrap: anywhere;
+}
+
+.btn-primary:focus-visible,
+.btn-secondary:focus-visible,
+.btn-shop:focus-visible,
+.chip:focus-visible {
+  outline: 2px solid var(--dx-ring);
+  outline-offset: 2px;
 }
 
 @media (max-width: 480px) {
